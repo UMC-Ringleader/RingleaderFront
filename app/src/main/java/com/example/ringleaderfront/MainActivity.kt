@@ -1,6 +1,6 @@
 package com.example.ringleaderfront
 
-import TabPageAdapter
+
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import androidx.viewpager2.widget.ViewPager2

@@ -1,4 +1,5 @@
-package com.example.umcproject
+package com.example.ringleaderfront
+
 
 data class User(var userName:String,
                 var email:String,
