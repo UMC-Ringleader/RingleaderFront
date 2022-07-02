@@ -45,6 +45,13 @@ class MainPageFragment : Fragment() {
 
         }
 
+        binding.mainPageLl.setOnClickListener {
+            val intent = Intent(getActivity(), ReviewinfoActivity::class.java)
+            startActivity(intent)
+
+        }
+
+
         return binding.root
     }
 }
