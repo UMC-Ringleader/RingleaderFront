@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".LoginActivity">
+
+    <TextView
+        android:id="@+id/login_subtitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="30dp"
+        android:text="우리동네 이모저모,"
+
+        android:layout_marginTop="80dp"
+        android:textSize="30sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/login_maintitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="40sp"
+        android:textColor="@color/black"
+        android:text="골목대장"
+
+        app:layout_constraintTop_toBottomOf="@id/login_subtitle"
+        app:layout_constraintEnd_toEndOf="@id/login_subtitle"
+        />
+
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_textInputLayout_email"
+        app:layout_constraintTop_toBottomOf="@id/login_maintitle"
+        android:layout_marginTop="30dp"
+        android:layout_width="330dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="이메일"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/login_textInputLayout_password"
+        app:layout_constraintTop_toBottomOf="@+id/login_textInputLayout_email"
+        android:layout_marginTop="30dp"
+        android:layout_width="330dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_height="wrap_content">
+        <com.google.android.material.textfield.TextInputEditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="textPassword"
+            android:hint="비밀번호"/>
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <Button
+        android:id="@+id/login_login_button"
+        android:layout_width="150dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="80dp"
+        android:textSize="25sp"
+        android:padding="30px"
+        android:backgroundTint="@color/black"
+
+        android:text="로그인"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/login_textInputLayout_password"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <TextView
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/login_signup_button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="처음이신가요?"
+        android:textSize="30dp"
+        android:gravity="center"/>
+
+
+    <Button
+        android:id="@+id/login_signup_button"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
+
+        android:layout_marginBottom="80dp"
+        android:textSize="25sp"
+        android:padding="30px"
+        android:backgroundTint="@color/black"
+
+        android:text="회원가입"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

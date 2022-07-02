@@ -39,10 +39,25 @@
     <!--        android:background="#8A8A8A"-->
     <!--        app:layout_constraintBottom_toTopOf="@id/first_guestButton"-->
     <!--        />-->
+    <Button
+        android:id="@+id/first_LoginButton"
+        android:layout_width="330dp"
+        android:layout_height="wrap_content"
 
+        android:layout_marginBottom="50dp"
+        android:textSize="25sp"
+        android:padding="30px"
+        android:backgroundTint="@color/black"
+
+        android:text="로그인 하기"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/first_GuestButton"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
     <Button
         android:id="@+id/first_GuestButton"
-        android:layout_width="wrap_content"
+        android:layout_width="330dp"
         android:layout_height="wrap_content"
 
         android:layout_marginBottom="80dp"

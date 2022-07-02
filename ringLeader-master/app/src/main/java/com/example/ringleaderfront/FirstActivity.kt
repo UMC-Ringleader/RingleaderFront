@@ -15,6 +15,11 @@ class FirstActivity : AppCompatActivity() {
             startActivity(myIntent)
         }
 
+        first_LoginButton.setOnClickListener {
+            val loginIntent:Intent=Intent(this,LoginActivity::class.java)
+            startActivity(loginIntent)
+        }
+
 
     }
 }
