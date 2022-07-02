@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <androidx.constraintlayout.widget.ConstraintLayout
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/main_page_tv_town"
+            app:layout_constraintTop_toTopOf="parent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="경리단길"
+            android:textSize="50dp"
+            android:textAlignment="center"
+            android:gravity="center"
+            android:textColor="@color/black"/>
+        <View
+            android:id="@+id/main_page_town_line"
+            android:layout_marginBottom="10dp"
+            app:layout_constraintTop_toBottomOf="@id/main_page_tv_town"
+            android:background="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="10px"/>
+
+        <TextView
+
+            android:id="@+id/main_page_see_catagory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="카테고리별로 보기"
+            app:layout_constraintTop_toBottomOf="@id/main_page_town_line"
+            android:textSize="30dp" />
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_baseline_keyboard_arrow_right_24"
+            app:layout_constraintTop_toBottomOf="@id/main_page_tv_town"
+            app:layout_constraintEnd_toEndOf="parent"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="20dp"
+
+            />
+        <View
+            android:id="@+id/main_page_category_line"
+            android:layout_marginTop="20dp"
+            app:layout_constraintTop_toBottomOf="@id/main_page_see_catagory"
+            android:background="#000000"
+            android:layout_width="match_parent"
+            android:layout_height="10px"/>
+        <FrameLayout
+            android:id="@+id/main_page_fl"
+            app:layout_constraintTop_toBottomOf="@id/main_page_category_line"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                app:layout_constraintTop_toBottomOf="@id/main_page_category_line"
+                >
+                <LinearLayout
+                    android:id="@+id/main_page_ll"
+
+                    android:orientation="vertical"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content">
+
+                </LinearLayout>
+
+            </ScrollView>
+
+
+
+        </FrameLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    <com.google.android.material.floatingactionbutton.ExtendedFloatingActionButton
+        android:id="@+id/extended_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:text="글 작성"
+        app:icon="@drawable/ic_baseline_add_24"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

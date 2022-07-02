@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Spinner
+        android:id="@+id/region_selectBox"
+        android:entries="@array/region"
+        android:layout_width="130dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+
+        android:spinnerMode="dropdown"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+
+
+    <TextView
+        android:id="@+id/town_recentVisit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"
+
+        android:textColor="@color/black"
+        android:text="최근 방문 동네"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/region_selectBox" />
+
+    <Button
+        android:id="@+id/town_recentVisit_btn"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:backgroundTint="@color/gray"
+
+        android:text="경리단길"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/town_recentVisit"
+        />
+
+
+
+    <View
+        android:id="@+id/town_Bar1"
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="80dp"
+        android:layout_marginStart="30dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/town_recentVisit_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        />
+
+    <TextView
+        android:id="@+id/town_recommend"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:textSize="25sp"
+
+        android:textColor="@color/black"
+        android:text="이런 곳은 어떠신가요?"
+
+        app:layout_constraintStart_toEndOf="@id/town_Bar1"
+        app:layout_constraintTop_toBottomOf="@id/town_recentVisit_btn"
+        app:layout_constraintEnd_toStartOf="@id/town_Bar2"
+        />
+
+    <View
+        android:id="@+id/town_Bar2"
+        android:layout_width="40dp"
+        android:layout_height="2dp"
+        android:layout_marginEnd="30dp"
+        android:background="@color/gray"
+        app:layout_constraintTop_toBottomOf="@id/town_recentVisit_btn"
+        app:layout_constraintTop_toTopOf="@id/town_Bar1"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/town_recommendTown_btn1"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="20dp"
+        android:textSize="25sp"
+        android:backgroundTint="@color/gray"
+
+        android:text="성수동"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/town_recommend"
+        />
+
+    <Button
+        android:id="@+id/town_recommendTown_btn2"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"
+        android:backgroundTint="@color/gray"
+
+        android:text="건대입구"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/town_recommendTown_btn1"
+        />
+
+    <Button
+        android:id="@+id/town_recommendTown_btn3"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+
+        android:layout_marginTop="30dp"
+        android:textSize="25sp"
+        android:backgroundTint="@color/gray"
+
+        android:text="용산역(지상)"
+
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/town_recommendTown_btn2"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

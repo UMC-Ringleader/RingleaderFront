@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <ImageView
+            android:id="@+id/review_profileImg"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/image_sample"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <TextView
+            android:id="@+id/reviewProfileName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginStart="30dp"
+            android:paddingBottom="10dp"
+            android:text="Royce, 85"
+            android:textSize="30dp"
+
+            app:layout_constraintBottom_toBottomOf="@id/review_profileImg"
+            app:layout_constraintStart_toEndOf="@id/review_profileImg" />
+
+        <View
+            android:id="@+id/review_Bar"
+            android:layout_width="350dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="30dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/black"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/reviewProfileName" />
+
+        <TextView
+            android:id="@+id/review_shopName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:text="타파스파"
+            android:textColor="@color/black"
+            android:textSize="35sp"
+
+            app:layout_constraintStart_toStartOf="@id/review_Bar"
+            app:layout_constraintTop_toBottomOf="@id/review_Bar" />
+
+        <TextView
+            android:id="@+id/review_shopType"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="35dp"
+            android:layout_marginEnd="40dp"
+            android:text="음식점"
+            android:textColor="@color/gray"
+            android:textSize="25sp"
+
+            app:layout_constraintEnd_toEndOf="@id/review_Bar"
+            app:layout_constraintTop_toBottomOf="@id/review_Bar" />
+
+        <TextView
+            android:id="@+id/review_tag1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="80dp"
+            android:background="@color/gray"
+            android:text="스페인"
+            android:textSize="20sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/review_shopName" />
+
+        <TextView
+            android:id="@+id/review_tag2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/gray"
+            android:text="빠에야"
+            android:textSize="20sp"
+
+            app:layout_constraintEnd_toStartOf="@id/review_tag3"
+            app:layout_constraintStart_toEndOf="@id/review_tag1"
+            app:layout_constraintTop_toTopOf="@id/review_tag1" />
+
+        <TextView
+            android:id="@+id/review_tag3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:background="@color/gray"
+            android:layout_marginEnd="80dp"
+            android:text="와인"
+            android:textSize="20sp"
+
+            app:layout_constraintTop_toTopOf="@id/review_tag1"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <ImageView
+            android:id="@+id/review_reviewImg"
+            android:layout_width="300dp"
+            android:layout_height="270dp"
+            android:layout_marginTop="30dp"
+            android:src="@drawable/image_sample"
+
+            app:layout_constraintTop_toBottomOf="@id/review_tag1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            />
+
+        <TextView
+            android:id="@+id/review_text"
+            android:layout_width="350dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:paddingHorizontal="20dp"
+            android:background="@color/gray"
+            android:textSize="28sp"
+            android:text="지나갈때마다 가보고싶었던.. 이태원 스페인요리 전문점 타파스파~~ 타파스어쩌고 저쩌고 어렵다,,, 리뷰리뷰리뷰리뷰리뷰 이것은 리뷰입니다 감사합니다. 맛있겠다.. 배고프다.. 어쩌고 저쩌고 리뷰끝."
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/review_reviewImg"/>
+
+        <Button
+            android:id="@+id/review_reaction1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="80dp"
+            android:background="@color/gray"
+            android:text="좋아요 (12)"
+            android:textSize="15sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/review_text" />
+
+        <Button
+            android:id="@+id/review_reaction2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="80dp"
+            android:background="@color/gray"
+            android:text="도움돼요 (3)"
+            android:textSize="15sp"
+
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/review_text" />
+
+        <Button
+            android:id="@+id/review_reaction3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="120dp"
+            android:background="@color/gray"
+            android:text="정확한 정보예요 (5)"
+            android:textSize="15sp"
+
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/review_reaction1" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</ScrollView>
+

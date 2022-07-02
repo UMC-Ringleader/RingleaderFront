@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <View
+        android:id="@+id/rank_myRank"
+        android:layout_width="350dp"
+        android:layout_height="100dp"
+        android:layout_marginTop="50dp"
+        android:background="@color/gray"
+
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+
+        />
+
+    <TextView
+        android:id="@+id/rank_myRank_Text"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginHorizontal="20dp"
+        android:background="#E3E3E3"
+        android:text="내 등수"
+        android:textSize="17sp"
+
+
+        app:layout_constraintBottom_toTopOf="@id/rank_myRank"
+        app:layout_constraintStart_toStartOf="@id/rank_myRank" />
+
+    <TextView
+        android:id="@+id/rank_myInfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:paddingStart="30dp"
+        android:paddingTop="20dp"
+        android:text="Royce-17등"
+        android:textSize="17sp"
+
+        app:layout_constraintStart_toStartOf="@id/rank_myRank"
+        app:layout_constraintTop_toTopOf="@id/rank_myRank" />
+
+    <TextView
+        android:id="@+id/rank_myContribution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:paddingStart="30dp"
+        android:paddingTop="15dp"
+        android:text="지역 기여도 : 85"
+        android:textSize="17sp"
+
+        app:layout_constraintStart_toStartOf="@id/rank_myRank"
+        app:layout_constraintTop_toBottomOf="@id/rank_myInfo" />
+
+
+    <View
+        android:id="@+id/Rank_Bar1"
+        android:layout_width="80dp"
+        android:layout_height="2dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginTop="80dp"
+        android:background="#8A8A8A"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rank_myRank" />
+
+    <TextView
+        android:id="@+id/Rank_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="60dp"
+        android:text="랭킹"
+
+        android:textColor="@color/black"
+        android:textSize="25sp"
+
+        app:layout_constraintEnd_toStartOf="@id/Rank_Bar2"
+        app:layout_constraintStart_toEndOf="@id/Rank_Bar1"
+        app:layout_constraintTop_toBottomOf="@id/rank_myRank" />
+
+    <View
+        android:id="@+id/Rank_Bar2"
+        android:layout_width="80dp"
+        android:layout_height="2dp"
+        android:layout_marginEnd="30dp"
+        android:background="#8A8A8A"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/rank_myRank"
+        app:layout_constraintTop_toTopOf="@id/Rank_Bar1" />
+
+    <ListView
+        android:id="@+id/rank_listView"
+        android:entries="@array/ranking"
+        android:layout_width="350dp"
+        android:layout_height="280dp"
+        android:layout_marginTop="30dp"
+
+        android:background="@color/gray"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/Rank_title"
+        />
+
+
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
