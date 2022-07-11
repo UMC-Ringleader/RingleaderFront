@@ -13,6 +13,7 @@ class FirstActivity : AppCompatActivity() {
         first_GuestButton.setOnClickListener {
             val myIntent : Intent = Intent(this, TownActivity :: class.java)
             startActivity(myIntent)
+            finish()
         }
 
         first_LoginButton.setOnClickListener {

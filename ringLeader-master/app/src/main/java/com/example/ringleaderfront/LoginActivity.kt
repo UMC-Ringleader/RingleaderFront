@@ -13,14 +13,17 @@ class LoginActivity : AppCompatActivity() {
         binding= ActivityLoginBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.loginSignupButton.setOnClickListener {
-            val myIntent: Intent = Intent(this,SignupActivity::class.java)
-            startActivity(myIntent)
-        }
-
         binding.loginLoginButton.setOnClickListener {
             val emailPwIntent:Intent=Intent(this,TownActivity::class.java)
             startActivity(emailPwIntent)
+            finish()
+        }
+
+
+
+        binding.loginSignupButton.setOnClickListener {
+            val myIntent: Intent = Intent(this,SignupActivity::class.java)
+            startActivity(myIntent)
         }
     }
 

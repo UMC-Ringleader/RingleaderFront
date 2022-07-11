@@ -7,11 +7,17 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-     <androidx.viewpager2.widget.ViewPager2
-         android:id="@+id/viewPager"
-         android:layout_width="match_parent"
-         android:layout_height="match_parent"
-         android:layout_above="@id/tabLayout"/>
+    <include
+        android:id="@+id/include_my_toolbar"
+        layout="@layout/my_toolbar" />
+
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/tabLayout"
+
+        android:layout_below="@id/include_my_toolbar" />
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"

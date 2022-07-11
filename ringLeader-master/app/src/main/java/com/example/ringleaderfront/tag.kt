@@ -1,3 +1,5 @@
 package com.example.ringleaderfront
 
-data class tag(var tagText:String)
+import java.io.Serializable
+
+data class tag(var tagText:String):Serializable
