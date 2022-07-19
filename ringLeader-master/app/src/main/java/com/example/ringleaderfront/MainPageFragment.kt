@@ -1,6 +1,7 @@
 package com.example.ringleaderfront
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Contacts.SettingsColumns.KEY
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
@@ -9,15 +10,90 @@ import android.widget.Toast
 import androidx.fragment.app.Fragment
 import com.example.ringleaderfront.databinding.FragmentMainPageBinding
 import kotlinx.android.synthetic.main.review_card.view.*
-
+import kotlinx.coroutines.Dispatchers.Main
 
 class MainPageFragment : Fragment() {
     lateinit var town:Town
+
+    //retrofit
+    lateinit var themeReviews:List<ThemeReview>
+
+
+
+    //WriteActivity에서 bundle객체 받기
+    companion object {
+        const val ARG_NAME = "name"
+//        fun newInstance(name: String): MainPageFragment {
+//            Log.d("order_newInstance","newInstance 함수 들어옴")
+//            val fragment = MainPageFragment()
+//            val bundle = Bundle().apply {
+//                putString(ARG_NAME, name)
+//                Log.d("newInstance_bundle_name",name)
+//            }
+//            fragment.arguments = bundle
+//            return fragment
+//        }
+//        fun newInstance(name: String) = MainPageFragment().apply {
+//            arguments = Bundle().apply {
+//                putString(ARG_NAME, name)
+//                Log.d("newInstance_bundle_name",name)
+//
+//            }
+//            Log.d("order_newInstance_finish","finish")
+//        }
+
+//        fun newInstance(name: String) = this.apply {
+//            val args = Bundle()
+//            args.putString(ARG_NAME, name)
+//            this.arguments = args
+//            Log.d("this.arguments",this.arguments.toString())
+//            return this
+//        }
+    }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
        val binding=FragmentMainPageBinding.inflate(inflater,container,false)
+        Log.d("order_OnCreateView","OnCreateView실행")
+//        arguments?.let{
+//            val name=it.getString(ARG_NAME)
+//            Log.d("apply_bundle?",name.toString())
+//        }
+        val name=arguments?.getString(ARG_NAME)
+        Log.d("ApplyBundle?",name.toString())
+
+        //retrofit
+//        lifecycleScope.launchWhenCreated {
+//            val response=try{
+//                RetrofitClass.reviewApi.getReviews(100)
+//            }catch(e:IOException){
+//                Log.e(TAG,"IOException,you might not have internet connection")
+//                return@launchWhenCreated
+//            }catch(e:HttpException){
+//                Log.e(TAG,"HTTPException,unexpected response")
+//                return@launchWhenCreated
+//            }
+//            if(response.isSuccessful&& response.body()!=null){
+//
+//                themeReviews=response.body()!!
+//            }else{
+//
+//                Log.e(TAG,"Response not successful")
+//            }
+//        }
+
+        //WriteActivity에서 bundle로 넘겨준 리뷰객체 받기
+
+//        var bundle = this.arguments
+//        Log.d("bundle상태",bundle.toString())
+//        if (bundle != null) {
+//            val bundleDefault=requireArguments().getString("bundleD")
+//            Log.d("bundleIsNotNull",bundleDefault.toString())
+//            //val writeReview=requireArguments()!!.getSerializable("writeReview")
+//            //Log.d("bundle_in_fragment",writeReview.toString())
+//        }
+
 
 
         //Dummytown
@@ -110,7 +186,7 @@ class MainPageFragment : Fragment() {
 
 
         val townBundleName=arguments?.getString("townBundleName")
-        Log.d("townBundleName fragment에서 꺼내기",townBundleName.toString())
+        //Log.d("townBundleName fragment에서 꺼내기",townBundleName.toString())
 
 
         return binding.root
