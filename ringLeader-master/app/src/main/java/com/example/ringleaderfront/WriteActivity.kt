@@ -1,11 +1,14 @@
 package com.example.ringleaderfront
 
+import com.example.ringleaderfront.R
 import android.content.Intent
 import android.os.Bundle
 import android.util.Log
+import android.widget.FrameLayout
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.FragmentTransaction
 import com.example.ringleaderfront.databinding.ActivityWriteBinding
+
 
 class WriteActivity : AppCompatActivity() {
     private lateinit var binding: ActivityWriteBinding
@@ -19,9 +22,28 @@ class WriteActivity : AppCompatActivity() {
 
         binding.writePosting.setOnClickListener {
             val name="apply_bundle"
-            val fragment=MainPageFragment.newInstance(name!!)
+            //val fragment=MainPageFragment.newInstance(name!!)
+//            val fragment: MainPageFragment = MainPageFragment.newInstance(name)
+//             val header = getLayoutInflater().inflate(R.layout.activity_main, null, false)
+//            val main_frm=header.findViewById<FrameLayout>(R.id.main_frm)
+//            supportFragmentManager.beginTransaction().replace(
+//                main_frm,
+//                fragment
+//            ).commit()
+
+            //MainActivity의 transactionMainPageFragment() 호출
+
+            //val activity=MainActivity()
+            //(activity as MainActivity).transactionMainPageFragment()
+           //(activity as MainActivity).writeToMain=1
+            Var().flag=1
             val intent = Intent(this, MainActivity::class.java)
             startActivity(intent)
+//            MainActivity().setWriteToMain()
+//            Log.d("writeToMain","WriteActivity에서 setWriteToMain()")
+
+
+
 //            supportFragmentManager.beginTransaction()
 //                .replace(R.id.main_frm, MainPageFragment())
 //                .commit()

@@ -1,19 +1,14 @@
 package com.example.ringleaderfront
 
 
+import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import androidx.appcompat.widget.Toolbar
-import androidx.viewpager2.widget.ViewPager2
 import com.example.ringleaderfront.databinding.ActivityMainBinding
 import com.example.ringleaderfront.databinding.MyToolbarBinding
-import com.google.android.material.tabs.TabLayout
-import kotlinx.android.synthetic.main.activity_first.*
-import kotlinx.android.synthetic.main.activity_main.*
-import kotlin.properties.Delegates
 
 class MainActivity : AppCompatActivity() {
 
@@ -21,14 +16,22 @@ class MainActivity : AppCompatActivity() {
 
     private lateinit var binding: ActivityMainBinding
     private lateinit var toolbarBinding:MyToolbarBinding
+    var mContext: Context? = null
+    var writeToMain=0
     override fun onCreate(savedInstanceState: Bundle?)
     {
         super.onCreate(savedInstanceState)
 
+        mContext=this
         binding=ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
         toolbarBinding=MyToolbarBinding.inflate(layoutInflater)
         initBottomNavigation()
+        Log.d("writeToMain?",writeToMain.toString())
+//        if(Var.==1){
+//            transactionMainPageFragment()
+//        }
+
 
         //setUpTabBar()
         //getmyIntent()
@@ -38,6 +41,26 @@ class MainActivity : AppCompatActivity() {
         //상단 툴바
 //        setContentView(R.layout.my_toolbar)
 //        setSupportActionBar(myToolbar)
+
+
+    }
+
+
+    fun setWriteToMain(){
+        writeToMain=1
+        Log.d("writeToMain","setWriteToMain에서 값"+writeToMain.toString())
+    }
+
+     fun transactionMainPageFragment() {
+        val name="main_activity_apply_bundle"
+        val fragment: MainPageFragment = MainPageFragment.newInstance(name)
+        val header = getLayoutInflater().inflate(R.layout.activity_main, null, false)
+        supportFragmentManager.beginTransaction().replace(
+            R.id.main_frm,
+            fragment
+        ).commit()
+
+
     }
 
     private fun initBottomNavigation() {

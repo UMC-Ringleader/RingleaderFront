@@ -23,16 +23,16 @@ class MainPageFragment : Fragment() {
     //WriteActivity에서 bundle객체 받기
     companion object {
         const val ARG_NAME = "name"
-//        fun newInstance(name: String): MainPageFragment {
-//            Log.d("order_newInstance","newInstance 함수 들어옴")
-//            val fragment = MainPageFragment()
-//            val bundle = Bundle().apply {
-//                putString(ARG_NAME, name)
-//                Log.d("newInstance_bundle_name",name)
-//            }
-//            fragment.arguments = bundle
-//            return fragment
-//        }
+        fun newInstance(name: String): MainPageFragment {
+            Log.d("order_newInstance","newInstance 함수 들어옴")
+            val fragment = MainPageFragment()
+            val bundle = Bundle().apply {
+                putString(ARG_NAME, name)
+                Log.d("newInstance_bundle_name",name)
+            }
+            fragment.arguments = bundle
+            return fragment
+        }
 //        fun newInstance(name: String) = MainPageFragment().apply {
 //            arguments = Bundle().apply {
 //                putString(ARG_NAME, name)
