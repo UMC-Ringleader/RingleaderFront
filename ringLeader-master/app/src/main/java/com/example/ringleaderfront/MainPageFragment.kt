@@ -60,8 +60,8 @@ class MainPageFragment : Fragment() {
 //            val name=it.getString(ARG_NAME)
 //            Log.d("apply_bundle?",name.toString())
 //        }
-        val name=arguments?.getString(ARG_NAME)
-        Log.d("ApplyBundle?",name.toString())
+        //val name=arguments?.getString(ARG_NAME)
+        //Log.d("ApplyBundle?",name.toString())
 
         //retrofit
 //        lifecycleScope.launchWhenCreated {
@@ -145,8 +145,14 @@ class MainPageFragment : Fragment() {
 
 
         binding.extendedFab.setOnClickListener {
-            val intent = Intent(getActivity(), WriteActivity::class.java)
+//            val intent = Intent(getActivity(), WriteActivity::class.java)
+//            startActivity(intent)
+            val intent = Intent(getActivity(), ReviewSelectSearchActivity::class.java)
             startActivity(intent)
+
+
+
+
 
         }
 

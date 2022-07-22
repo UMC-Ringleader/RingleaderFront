@@ -50,6 +50,7 @@
         android:backgroundTint="@color/black"
 
         android:text="로그인 하기"
+        android:textColor="@color/white"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toTopOf="@id/first_GuestButton"
@@ -66,6 +67,7 @@
         android:backgroundTint="@color/black"
 
         android:text="로그인 없이 둘러보기"
+        android:textColor="@color/white"
 
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintBottom_toBottomOf="parent"

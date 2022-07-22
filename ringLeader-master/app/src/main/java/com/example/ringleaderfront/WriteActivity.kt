@@ -36,9 +36,9 @@ class WriteActivity : AppCompatActivity() {
             //val activity=MainActivity()
             //(activity as MainActivity).transactionMainPageFragment()
            //(activity as MainActivity).writeToMain=1
-            Var().flag=1
-            val intent = Intent(this, MainActivity::class.java)
-            startActivity(intent)
+//            Var().flag=1
+//            val intent = Intent(this, MainActivity::class.java)
+//            startActivity(intent)
 //            MainActivity().setWriteToMain()
 //            Log.d("writeToMain","WriteActivity에서 setWriteToMain()")
 
