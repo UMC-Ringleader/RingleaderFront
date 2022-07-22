@@ -143,18 +143,18 @@ class MainPageFragment : Fragment() {
         }
         binding.mainPageLl.addView(reviewView3)
 
-
-        binding.extendedFab.setOnClickListener {
-//            val intent = Intent(getActivity(), WriteActivity::class.java)
+//floating button 글 작성 버튼
+//        binding.extendedFab.setOnClickListener {
+////            val intent = Intent(getActivity(), WriteActivity::class.java)
+////            startActivity(intent)
+//            val intent = Intent(getActivity(), ReviewSelectSearchActivity::class.java)
 //            startActivity(intent)
-            val intent = Intent(getActivity(), ReviewSelectSearchActivity::class.java)
-            startActivity(intent)
-
-
-
-
-
-        }
+//
+//
+//
+//
+//
+//        }
 
 
 
