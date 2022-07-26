@@ -2,6 +2,7 @@ package com.example.ringleaderfront.gallary
 
 import android.Manifest
 import android.content.ContentValues.TAG
+import android.content.Intent
 import android.content.pm.PackageManager
 import android.graphics.Bitmap
 import android.graphics.Color
@@ -22,6 +23,8 @@ import androidx.constraintlayout.widget.StateSet.TAG
 import com.bumptech.glide.Glide
 import com.esafirm.imagepicker.features.*
 import com.example.ringleaderfront.R
+import com.example.ringleaderfront.TownActivity
+import com.example.ringleaderfront.WriteReview.ReviewWriteActivity
 import com.example.ringleaderfront.databinding.ActivityReviewSelectGallaryBinding
 import com.example.ringleaderfront.databinding.ActivityReviewSelectSearchBinding
 import kotlinx.android.synthetic.main.activity_review_select_gallary.*
@@ -37,12 +40,12 @@ class ReviewSelectGallaryActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         binding= ActivityReviewSelectGallaryBinding.inflate(layoutInflater)
         setContentView(binding.root)
-
+        selectedImages=ArrayList<Uri>()
 
 
         launcher = registerImagePicker { result ->
             if (result.isNotEmpty()) {
-                selectedImages=ArrayList<Uri>()
+
                 val selectedImage = result.first() // 1장만 선택하기 때문에
                 val selectedImage2=result.get(1)
                 val selectedImage3=result.get(2)
@@ -73,6 +76,14 @@ class ReviewSelectGallaryActivity : AppCompatActivity() {
             }
 
             launcher.launch(config)
+        }
+
+        binding.reviewSelectGallaryConfirmBtn.setOnClickListener {
+            val gallaryToWrite : Intent = Intent(this, ReviewWriteActivity :: class.java)
+            if(selectedImages!=null) {
+                gallaryToWrite.putExtra("UriArray", selectedImages)
+            }
+            startActivity(gallaryToWrite)
         }
 
 

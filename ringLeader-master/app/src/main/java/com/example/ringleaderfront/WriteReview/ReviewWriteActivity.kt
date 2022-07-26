@@ -1,5 +1,6 @@
 package com.example.ringleaderfront.WriteReview
 
+import android.net.Uri
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.text.Editable
@@ -9,9 +10,11 @@ import com.example.ringleaderfront.databinding.ActivityReviewWriteBinding
 
 
 class ReviewWriteActivity : AppCompatActivity() {
+
+    lateinit var binding:ActivityReviewWriteBinding
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        val binding = ActivityReviewWriteBinding.inflate(layoutInflater)
+        binding = ActivityReviewWriteBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
         var reviewText: String = ""
@@ -38,6 +41,17 @@ class ReviewWriteActivity : AppCompatActivity() {
         binding.writeBtn.setOnClickListener {
             Toast.makeText(this, reviewText, Toast.LENGTH_SHORT).show()
         }
+
+        imageLoad()
+
+    }
+
+    private fun imageLoad() {
+
+        var Uris =  intent.getSerializableExtra("UriArray") as ArrayList<Uri>
+        binding.reviewWriteLlIv1.setImageURI(Uris.get(0))
+        binding.reviewWriteLlIv2.setImageURI(Uris.get(1))
+        binding.reviewWriteLlIv3.setImageURI(Uris.get(2))
 
     }
 }
