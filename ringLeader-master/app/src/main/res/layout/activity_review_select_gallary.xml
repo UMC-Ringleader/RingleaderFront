@@ -4,34 +4,108 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ReviewSelectGallaryActivity">
+    tools:context=".gallary.ReviewSelectGallaryActivity">
+
+<!--    <ImageButton-->
+<!--        android:id="@+id/review_select_gallary_arrow_iv"-->
+<!--        android:layout_width="38dp"-->
+<!--        android:layout_height="32dp"-->
+<!--        android:src="@drawable/ic_baseline_keyboard_arrow_left_24"-->
+<!--        android:background="@color/clear"-->
+<!--        android:layout_marginTop="15dp"-->
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent" />-->
+
+<!--    <TextView-->
+<!--        android:id="@+id/review_select_gallary_top_tv"-->
+<!--        android:layout_width="wrap_content"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        android:text="리뷰 쓰기"-->
+<!--        android:textColor="@color/main_color"-->
+<!--        android:layout_marginTop="20dp"-->
+<!--        app:layout_constraintStart_toEndOf="@id/review_select_gallary_arrow_iv"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/review_select_gallary_toolbar_cl"-->
+<!--  -->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintTop_toTopOf="parent"/>-->
+
+<!--    <GridLayout-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="wrap_content"-->
+<!--        app:layout_constraintTop_toBottomOf="@id/review_select_gallary_toolbar_cl"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/review_select_gallary_bottom_tv"/>-->
+
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/review_select_gallary_toolbar_cl"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <!-- gallery toolbar -->
+
+        <include layout="@layout/snippet_top_gallerytoolbar"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 
     <ImageButton
-        android:id="@+id/review_select_gallary_arrow_iv"
-        android:layout_width="38dp"
-        android:layout_height="32dp"
-        android:src="@drawable/ic_baseline_keyboard_arrow_left_24"
-        android:background="@color/clear"
-        android:layout_marginTop="15dp"
+        android:id="@+id/review_select_gallary_image_select_btn"
+        android:src="@drawable/ic_baseline_add_24"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <TextView
-        android:id="@+id/review_select_gallary_top_tv"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="리뷰 쓰기"
-        android:textColor="@color/main_color"
-        android:layout_marginTop="20dp"
-        app:layout_constraintStart_toEndOf="@id/review_select_gallary_arrow_iv"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent"/>
+        app:layout_constraintTop_toBottomOf="@id/review_select_gallary_toolbar_cl"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+    </ImageButton>
 
-    <GridLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/review_select_gallary_top_tv"
-        app:layout_constraintBottom_toTopOf="@id/review_select_gallary_bottom_tv"/>
+    <ImageView
+        android:id="@+id/review_select_gallary_selected_iv1"
+        app:layout_constraintTop_toBottomOf="@id/review_select_gallary_image_select_btn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+
+    </ImageView>
+    <ImageView
+        android:id="@+id/review_select_gallary_selected_iv2"
+        app:layout_constraintTop_toBottomOf="@id/review_select_gallary_selected_iv1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+
+    </ImageView>
+    <ImageView
+        android:id="@+id/review_select_gallary_selected_iv3"
+        app:layout_constraintTop_toBottomOf="@id/review_select_gallary_selected_iv2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_width="200dp"
+        android:layout_height="200dp">
+
+    </ImageView>
+
+<!--    <GridView-->
+
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_height="0dp"-->
+<!--        android:layout_weight="40"-->
+<!--        android:id="@+id/gridView"-->
+<!--        android:numColumns="3"-->
+<!--        android:verticalSpacing="1.5dp"-->
+<!--        android:horizontalSpacing="1.5dp"-->
+<!--        android:stretchMode="none"-->
+<!--        android:gravity="center"-->
+<!--        android:layout_marginTop="1dp"-->
+
+<!--        app:layout_constraintStart_toStartOf="parent"-->
+<!--        app:layout_constraintEnd_toEndOf="parent"-->
+<!--        app:layout_constraintBottom_toTopOf="@id/review_select_gallary_toolbar_cl"-->
+
+<!--        />-->
+
 
 
     <!--//하단 박스-->
@@ -54,7 +128,7 @@
         app:layout_constraintTop_toTopOf="@id/review_select_gallary_bottom_tv"
         android:layout_marginEnd="20dp"
         android:background="@drawable/rectangle_btn_background"
-        android:text="확인(0/0)"
+        android:text="@string/confirm"
         android:textColor="@color/white" />
 
     <Button
@@ -67,7 +141,7 @@
         app:layout_constraintTop_toTopOf="@id/review_select_gallary_bottom_tv"
         android:layout_marginEnd="20dp"
         android:background="@drawable/text_btn_background"
-        android:text="건너뛰기"
+        android:text="@string/pass"
         android:textColor="@color/white" />
 
 

@@ -4,6 +4,8 @@
     package="com.example.ringleaderfront">
 
     <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
         android:allowBackup="true"
@@ -17,10 +19,13 @@
         tools:remove="android:appComponentFactory"
         tools:targetApi="p">
         <activity
-            android:name=".ReviewSelectGallaryActivity"
+            android:name=".ReviewWriteActivity"
             android:exported="false" />
         <activity
-            android:name=".ReviewSelectSearchActivity"
+            android:name=".gallary.ReviewSelectGallaryActivity"
+            android:exported="false" />
+        <activity
+            android:name=".WriteReview.ReviewSelectSearchActivity"
             android:exported="false" />
         <activity
             android:name=".ReviewinfoActivity"

@@ -1,16 +1,14 @@
 package com.example.ringleaderfront
 import android.content.Intent
 import android.os.Bundle
-import android.provider.Contacts.SettingsColumns.KEY
 import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.fragment.app.Fragment
+import com.example.ringleaderfront.WriteReview.ReviewSelectSearchActivity
 import com.example.ringleaderfront.databinding.FragmentMainPageBinding
 import kotlinx.android.synthetic.main.review_card.view.*
-import kotlinx.coroutines.Dispatchers.Main
 
 class MainPageFragment : Fragment() {
     lateinit var town:Town
@@ -144,17 +142,17 @@ class MainPageFragment : Fragment() {
         binding.mainPageLl.addView(reviewView3)
 
 //floating button 글 작성 버튼
-//        binding.extendedFab.setOnClickListener {
-////            val intent = Intent(getActivity(), WriteActivity::class.java)
-////            startActivity(intent)
-//            val intent = Intent(getActivity(), ReviewSelectSearchActivity::class.java)
+        binding.extendedFab.setOnClickListener {
+//            val intent = Intent(getActivity(), WriteActivity::class.java)
 //            startActivity(intent)
-//
-//
-//
-//
-//
-//        }
+            val intent = Intent(getActivity(), ReviewSelectSearchActivity::class.java)
+            startActivity(intent)
+
+
+
+
+
+        }
 
 
 
