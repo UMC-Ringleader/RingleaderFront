@@ -1,5 +1,6 @@
 package com.example.ringleaderfront.WriteReview
 
+import android.net.Uri
 import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
@@ -13,9 +14,14 @@ class ReviewWriteCheckActivity : AppCompatActivity() {
         val binding = ActivitReviewWriteCheckBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-        binding.titleCheckText.text = intent.getStringExtra("title")
-        binding.tagCheckText.text = intent.getStringExtra("tag")
-        binding.reviewCheckText.text = intent.getStringExtra("reviewText")
+        binding.titleCheckText.text = intent.getStringExtra("titleTxt")
+        binding.tagCheckText.text = intent.getStringExtra("tagTxt")
+        binding.reviewCheckText.text = intent.getStringExtra("reviewTxt")
+
+        var Uris = intent.getSerializableExtra("UriArray") as ArrayList<Uri>
+        binding.reviewWriteLlIv1.setImageURI(Uris.get(0))
+        binding.reviewWriteLlIv2.setImageURI(Uris.get(1))
+        binding.reviewWriteLlIv3.setImageURI(Uris.get(2))
 
 
         binding.postBtn.setOnClickListener {
