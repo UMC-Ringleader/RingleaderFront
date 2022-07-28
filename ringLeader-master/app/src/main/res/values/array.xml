@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="region">
+        <item>서울</item>
+        <item>경기</item>
+        <item>부산</item>
+    </string-array>
+
+    <string-array name="ranking">
+        <item>1. 무지 : 152</item>
+        <item>2. 라이언 : 106</item>
+        <item>3. Korgg : 102</item>
+        <item>4. 토마토 : 98</item>
+        <item>4. 토마토 : 98</item>
+        <item>4. 토마토 : 98</item>
+        <item>4. 토마토 : 98</item>
+        <item>4. 토마토 : 98</item>
+        <item>4. 토마토 : 98</item>
+
+    </string-array>
+</resources>

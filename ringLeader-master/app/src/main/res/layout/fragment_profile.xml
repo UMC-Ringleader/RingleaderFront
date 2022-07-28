@@ -1,0 +1,212 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/profile_image"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="30dp"
+        android:src="@drawable/image_sample"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/profile_nameTxt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="10dp"
+        android:text="활동 이름"
+        android:textSize="25sp"
+
+        app:layout_constraintEnd_toStartOf="@id/profile_userName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_image" />
+
+    <TextView
+        android:id="@+id/profile_userName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:background="@color/gray"
+
+        android:paddingHorizontal="20dp"
+        android:text="Royce"
+        android:textSize="25sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@id/profile_nameTxt"
+        app:layout_constraintTop_toTopOf="@id/profile_nameTxt" />
+
+    <TextView
+        android:id="@+id/profile_activeTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_marginTop="30dp"
+        android:text="활동 동네"
+
+        android:textSize="30sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_userName" />
+
+    <View
+        android:id="@+id/profile_Bar1"
+        android:layout_width="150dp"
+        android:layout_height="3dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/black"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_activeTitle" />
+
+
+    <View
+        android:id="@+id/profile_activeTown1"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginStart="25dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_Bar1" />
+
+    <TextView
+        android:id="@+id/profile_activeTown1_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="성수동"
+        android:textSize="25sp"
+
+        app:layout_constraintEnd_toEndOf="@id/profile_activeTown1"
+        app:layout_constraintStart_toStartOf="@id/profile_activeTown1"
+        app:layout_constraintTop_toTopOf="@id/profile_activeTown1" />
+
+    <TextView
+        android:id="@+id/profile_activeTown1_contribution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="120"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="@id/profile_activeTown1"
+        app:layout_constraintStart_toStartOf="@id/profile_activeTown1"
+        app:layout_constraintTop_toBottomOf="@id/profile_activeTown1_name" />
+
+    <View
+        android:id="@+id/profile_activeTown2"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toStartOf="@id/profile_activeTown3"
+        app:layout_constraintStart_toEndOf="@id/profile_activeTown1"
+        app:layout_constraintTop_toTopOf="@id/profile_activeTown1" />
+
+    <TextView
+        android:id="@+id/profile_activeTown2_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="경리단길"
+        android:textSize="25sp"
+
+        app:layout_constraintEnd_toEndOf="@id/profile_activeTown2"
+        app:layout_constraintStart_toStartOf="@id/profile_activeTown2"
+        app:layout_constraintTop_toTopOf="@id/profile_activeTown2" />
+
+    <TextView
+        android:id="@+id/profile_activeTown2_contribution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="85"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="@id/profile_activeTown2"
+        app:layout_constraintStart_toStartOf="@id/profile_activeTown2"
+        app:layout_constraintTop_toBottomOf="@id/profile_activeTown2_name" />
+
+    <View
+        android:id="@+id/profile_activeTown3"
+        android:layout_width="110dp"
+        android:layout_height="110dp"
+        android:layout_marginEnd="25dp"
+        android:background="@color/gray"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/profile_activeTown1" />
+
+    <TextView
+        android:id="@+id/profile_activeTown3_name"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="왕십리"
+        android:textSize="25sp"
+
+        app:layout_constraintEnd_toEndOf="@id/profile_activeTown3"
+        app:layout_constraintStart_toStartOf="@id/profile_activeTown3"
+        app:layout_constraintTop_toTopOf="@id/profile_activeTown3" />
+
+    <TextView
+        android:id="@+id/profile_activeTown3_contribution"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="72"
+        android:textSize="20sp"
+
+        app:layout_constraintEnd_toEndOf="@id/profile_activeTown3"
+        app:layout_constraintStart_toStartOf="@id/profile_activeTown3"
+        app:layout_constraintTop_toBottomOf="@id/profile_activeTown3_name" />
+
+
+    <View
+        android:id="@+id/profile_Bar2"
+        android:layout_width="350dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_activeTown3" />
+
+    <Button
+        android:id="@+id/profile_myReview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:paddingRight="90dp"
+        android:backgroundTint="@color/gray"
+        android:text="작성한 리뷰(150)"
+        android:textSize="25sp"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_Bar2" />
+
+
+
+    <View
+        android:id="@+id/profile_Bar3"
+        android:layout_width="350dp"
+        android:layout_height="2dp"
+        android:layout_marginTop="10dp"
+        android:background="@color/gray"
+
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/profile_myReview" />
+</androidx.constraintlayout.widget.ConstraintLayout>

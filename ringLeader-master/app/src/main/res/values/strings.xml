@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">ringLeaderFront</string>
+    <string name="extended_fab_label">글 작성</string>
+    <string name="string_next">next</string>
+    <string name="pass">건너뛰기</string>
+    <string name="confirm">확인</string>
+</resources>
