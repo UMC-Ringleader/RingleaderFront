@@ -97,9 +97,9 @@ class MainPageFragment : Fragment() {
         //Dummytown
         var dummyTown1=Town("경리단길", ArrayList())
 
-        var themeReview1=ThemeReview("제목1","상점1","catagory1",null, ArrayList(),"text1")
-        var themeReview2=ThemeReview("제목2","상점2","catagory2",null,ArrayList(),"text2")
-        var themeReview3=ThemeReview("제목3","상점3","catagory3",null,ArrayList(),"text3")
+        var themeReview1=ThemeReview("상점1","catagory1",null, ArrayList(),"image1","text1")
+        var themeReview2=ThemeReview("상점2","catagory2",null,ArrayList(),"image2","text2")
+        var themeReview3=ThemeReview("상점3","catagory3",null,ArrayList(),"image3","text3")
 
         themeReview1.tags?.add(tag("tag1_1"))
         themeReview1.tags?.add(tag("tag1_2"))

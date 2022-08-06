@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WriteReview.ReviewWriteActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -35,7 +34,6 @@
                 android:textColor="@color/main_color"
                 android:textStyle="bold" />
         </RelativeLayout>
-
 
         <ScrollView
             android:layout_width="match_parent"
@@ -124,7 +122,6 @@
                     android:inputType="textMultiLine"
 
 
-                    android:maxLength="10000"
                     android:minHeight="300dp"
                     android:paddingHorizontal="30dp"
                     android:textSize="9pt"
@@ -136,9 +133,8 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/gray"
-                    android:minHeight="80dp">
+                    android:layout_height="80dp"
+                    android:background="@color/gray">
 
                     <TextView
                         android:id="@+id/letter_count"
@@ -149,7 +145,7 @@
                         android:layout_centerVertical="true"
 
                         android:layout_marginStart="20dp"
-                        android:hint="(0/10,000)" />
+                        android:hint="(0/100,000)" />
 
 
                     <androidx.appcompat.widget.AppCompatButton
@@ -163,6 +159,7 @@
                         android:layout_marginEnd="20dp"
                         android:background="@drawable/button_back"
 
+
                         android:text="작성완료"
                         android:textColor="@color/white" />
 
@@ -171,6 +168,6 @@
 
             </LinearLayout>
         </ScrollView>
-
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
