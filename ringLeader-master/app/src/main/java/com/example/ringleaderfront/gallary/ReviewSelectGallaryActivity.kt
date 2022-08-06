@@ -78,13 +78,10 @@ class ReviewSelectGallaryActivity : AppCompatActivity() {
             launcher.launch(config)
         }
 
-        var query =intent.getStringExtra("query")
-
         binding.reviewSelectGallaryConfirmBtn.setOnClickListener {
             val gallaryToWrite : Intent = Intent(this, ReviewWriteActivity :: class.java)
             if(selectedImages!=null) {
                 gallaryToWrite.putExtra("UriArray", selectedImages)
-                gallaryToWrite.putExtra("query", query)
             }
             startActivity(gallaryToWrite)
         }

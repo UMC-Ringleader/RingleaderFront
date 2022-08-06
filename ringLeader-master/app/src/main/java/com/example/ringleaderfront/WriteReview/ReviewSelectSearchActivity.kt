@@ -68,7 +68,6 @@ class ReviewSelectSearchActivity : AppCompatActivity() {
                                 this@ReviewSelectSearchActivity,
                                 ReviewSelectGallaryActivity::class.java
                             )
-                            intent.putExtra("query", query)
                             startActivity(intent)
                         }
 
