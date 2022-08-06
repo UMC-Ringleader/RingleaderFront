@@ -21,6 +21,7 @@ class ReviewWriteActivity : AppCompatActivity() {
         var reviewText: String = ""
         binding.writeBtn.isEnabled = false
 
+
         binding.reviewEditText.addTextChangedListener(object : TextWatcher {
             override fun beforeTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 binding.letterCount.text = "0 / 10,000"
@@ -28,13 +29,14 @@ class ReviewWriteActivity : AppCompatActivity() {
 
             override fun onTextChanged(p0: CharSequence?, p1: Int, p2: Int, p3: Int) {
                 reviewText = binding.reviewEditText.text.toString()
-                binding.writeBtn.isEnabled = reviewText.isNotEmpty()
+
                 binding.letterCount.text = reviewText.length.toString() + " / 10,000"
             }
 
             override fun afterTextChanged(p0: Editable?) {
                 reviewText = binding.reviewEditText.text.toString()
                 binding.letterCount.text = reviewText.length.toString() + " / 10,000"
+                binding.writeBtn.isEnabled = reviewText.isNotEmpty()
             }
 
         })
@@ -50,12 +52,14 @@ class ReviewWriteActivity : AppCompatActivity() {
             val titleText = binding.titleEditText.text.toString()
             val tagText = binding.tagEditText.text.toString()
             val reviewText = binding.reviewEditText.text.toString()
+            var query = intent.getStringExtra("query")
 
             val writeToCheck = Intent(this, ReviewWriteCheckActivity::class.java)
             writeToCheck.putExtra("titleTxt", titleText)
             writeToCheck.putExtra("tagTxt", tagText)
             writeToCheck.putExtra("reviewTxt", reviewText)
             writeToCheck.putExtra("UriArray", Uris)
+            writeToCheck.putExtra("query", query)
             startActivity(writeToCheck)
         }
     }
