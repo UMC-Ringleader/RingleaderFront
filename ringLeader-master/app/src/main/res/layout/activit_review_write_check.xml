@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".WriteReview.ReviewWriteCheckActivity">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/review_select_search_arrow_iv"
+                android:layout_width="38dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="리뷰 쓰기"
+                android:textColor="@color/main_color"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/storeName_check"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="40dp"
+                android:text="&quot;가게이름&quot;"
+                android:textColor="@color/main_color"
+                android:textStyle="bold"
+                android:textSize="8pt"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="8dp"
+                android:text="리뷰 등록하시겠습니까?"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="6.5pt"/>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@color/gray">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginStart="30dp"
+                    android:orientation="horizontal">
+
+                    //사진불러오기 수정해야함(이전액티비티에서 가져오도록)
+                    <ImageView
+                        android:id="@+id/review_write_ll_iv1"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+
+                        android:src="@drawable/image_sample" />
+
+                    <ImageView
+                        android:id="@+id/review_write_ll_iv2"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/image_sample" />
+
+                    <ImageView
+                        android:id="@+id/review_write_ll_iv3"
+                        android:layout_width="90dp"
+                        android:layout_height="90dp"
+                        android:layout_marginStart="5dp"
+                        android:src="@drawable/image_sample" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/title_check_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="30dp"
+                    android:layout_marginTop="30dp"
+                    android:text="제목"
+                    android:textColor="@color/black"
+                    android:textSize="10pt"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/tag_check_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="태그"
+                    android:textColor="@color/main_color"
+
+                    android:layout_marginStart="30dp"
+                    android:textSize="7pt" />
+
+                <TextView
+                    android:id="@+id/review_check_text"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_marginTop="10dp"
+                    android:layout_marginBottom="50dp"
+                    android:text="리뷰내용"
+
+                    android:layout_marginStart="30dp"
+                    android:textSize="7pt" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/white"
+                    android:orientation="vertical">
+
+                    <Button
+                        android:id="@+id/post_btn"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:layout_marginTop="30dp"
+                        android:backgroundTint="@color/main_color"
+                        android:text="확인"
+                        android:textColor="@color/white"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+
+    </LinearLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

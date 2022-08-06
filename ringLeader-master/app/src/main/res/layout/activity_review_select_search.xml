@@ -62,12 +62,12 @@
     <Button
         android:id="@+id/review_select_search_register_btn"
         android:layout_width="wrap_content"
-        android:layout_height="26dp"
+        android:layout_height="35dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/review_select_search_bottom_tv"
         app:layout_constraintTop_toTopOf="@id/review_select_search_bottom_tv"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/rectangle_btn_background"
+        android:background="@drawable/round_button"
         android:text="등록"
         android:textColor="@color/white" />
 
