@@ -56,28 +56,38 @@
                     android:gravity="center">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:id="@+id/review_write_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
                         android:orientation="horizontal">
+                            <ImageButton
+                                android:id="@+id/review_write_ll_ib"
+                                android:background="@android:color/transparent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_baseline_add_24"
+                                android:visibility="visible"
+                                android:layout_gravity="center">
 
-                        <ImageView
-                            android:id="@+id/review_write_ll_iv1"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/image_sample" />
+                            </ImageButton>
+<!--                        <ImageView-->
+<!--                            android:id="@+id/review_write_ll_iv1"-->
+<!--                            android:layout_width="150dp"-->
+<!--                            android:layout_height="150dp"-->
+<!--                            android:src="@drawable/image_sample" />-->
 
-                        <ImageView
-                            android:id="@+id/review_write_ll_iv2"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/image_sample" />
+<!--                        <ImageView-->
+<!--                            android:id="@+id/review_write_ll_iv2"-->
+<!--                            android:layout_width="150dp"-->
+<!--                            android:layout_height="150dp"-->
+<!--                            android:src="@drawable/image_sample" />-->
 
 
-                        <ImageView
-                            android:id="@+id/review_write_ll_iv3"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/image_sample" />
+<!--                        <ImageView-->
+<!--                            android:id="@+id/review_write_ll_iv3"-->
+<!--                            android:layout_width="150dp"-->
+<!--                            android:layout_height="150dp"-->
+<!--                            android:src="@drawable/image_sample" />-->
 
 
                     </LinearLayout>
