@@ -43,11 +43,6 @@ class ReviewWriteCheckActivity : AppCompatActivity() {
             Toast.makeText(this, "작성 완료", Toast.LENGTH_SHORT).show()
 
             val postCheck = Intent(this, ReviewinfoActivity::class.java)
-            //postCheck.putExtra("titleTxt", "titleTxt")
-            //postCheck.putExtra("tagTxt", "tagTxt")
-            //postCheck.putExtra("reviewTxt", "reviewTxt")
-            //postCheck.putExtra("UriArray", "UriArray")
-            //postCheck.putExtra("query", "query")
             postCheck.putExtra("review_content", themeReview4)
             startActivity(postCheck)
         }
