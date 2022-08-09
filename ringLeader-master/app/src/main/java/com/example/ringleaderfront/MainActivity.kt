@@ -51,7 +51,7 @@ class MainActivity : AppCompatActivity() {
         Log.d("writeToMain","setWriteToMain에서 값"+writeToMain.toString())
     }
 
-     fun transactionMainPageFragment() {
+    fun transactionMainPageFragment() {
         val name="main_activity_apply_bundle"
         val fragment: MainPageFragment = MainPageFragment.newInstance(name)
         val header = getLayoutInflater().inflate(R.layout.activity_main, null, false)
@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() {
         //sendToFragment(townIntent)
         //툴바 장소text set
         //Log.d("toolbar_text", toolbarBinding.myToolbarTv.text.toString())
-       // Log.d("townIntent.name",townIntent?.name!!)
+        // Log.d("townIntent.name",townIntent?.name!!)
         var myToolbarTv=findViewById<TextView>(R.id.my_toolbar_tv)
         val mUpdateUITimerTask = Runnable { // do whatever you want to change here, like:
             //toolbarBinding.myToolbarTv.text=townIntent.name
@@ -170,11 +170,11 @@ class MainActivity : AppCompatActivity() {
 
 
 
-   override fun onResume(){
+    override fun onResume(){
         super.onResume()
         getmyIntent()
         //getWriteIntent()
-   }
+    }
 
 //    private fun getWriteIntent() {
 //        Log.d("getWriteIntent함수","진입")

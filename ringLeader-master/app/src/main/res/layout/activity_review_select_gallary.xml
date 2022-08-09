@@ -122,19 +122,19 @@
     <Button
         android:id="@+id/review_select_gallary_confirm_btn"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_height="26dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="@id/review_select_gallary_bottom_tv"
         app:layout_constraintTop_toTopOf="@id/review_select_gallary_bottom_tv"
         android:layout_marginEnd="20dp"
-        android:background="@drawable/circle_background"
+        android:background="@drawable/rectangle_btn_background"
         android:text="@string/confirm"
         android:textColor="@color/white" />
 
     <Button
         android:id="@+id/review_select_gallary_pass_btn"
         android:layout_width="wrap_content"
-        android:layout_height="35dp"
+        android:layout_height="26dp"
         app:layout_constraintStart_toStartOf="parent"
 
         app:layout_constraintBottom_toBottomOf="@id/review_select_gallary_bottom_tv"

@@ -18,15 +18,14 @@
         android:theme="@style/Theme.RingLeaderFront"
         tools:remove="android:appComponentFactory"
         tools:targetApi="p">
-
+        <activity
+            android:name=".WriteReview.ReviewWriteActivity"
+            android:exported="false" />
         <activity
             android:name=".gallary.ReviewSelectGallaryActivity"
             android:exported="false" />
         <activity
             android:name=".WriteReview.ReviewSelectSearchActivity"
-            android:exported="false" />
-        <activity
-            android:name=".WriteReview.ReviewWriteActivity"
             android:exported="false" />
         <activity
             android:name=".WriteReview.ReviewWriteCheckActivity"

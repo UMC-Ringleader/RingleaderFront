@@ -34,12 +34,17 @@
                 android:text="리뷰 쓰기"
                 android:textColor="@color/main_color"
                 android:textStyle="bold" />
+
         </RelativeLayout>
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="150dp"
             android:orientation="vertical">
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/gray"/>
 
             <TextView
                 android:id="@+id/storeName_check"
@@ -118,16 +123,42 @@
                     android:textSize="10pt"
                     android:textStyle="bold" />
 
-                <TextView
-                    android:id="@+id/tag_check_text"
+                <LinearLayout
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-
-                    android:text="태그"
-                    android:textColor="@color/main_color"
+                    android:layout_marginTop="10dp"
 
                     android:layout_marginStart="30dp"
-                    android:textSize="7pt" />
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:id="@+id/review_tag1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="태그1"
+                        android:textColor="@color/main_color"
+                        android:textSize="7pt" />
+
+                    <TextView
+                        android:id="@+id/review_tag2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="태그2"
+                        android:textColor="@color/main_color"
+                        android:textSize="7pt" />
+
+                    <TextView
+                        android:id="@+id/review_tag3"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="10dp"
+                        android:text="태그3"
+                        android:textColor="@color/main_color"
+                        android:textSize="7pt"
+
+                        />
+                </LinearLayout>
 
                 <TextView
                     android:id="@+id/review_check_text"

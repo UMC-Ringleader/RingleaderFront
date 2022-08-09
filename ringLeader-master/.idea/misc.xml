@@ -3,32 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable-v24/ic_baseline_home_24.xml" value="0.122" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable-v24/ic_baseline_list_24.xml" value="0.122" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/button_back.xml" value="0.138" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/ic_baseline_keyboard_arrow_left_24.xml" value="0.122" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/ic_baseline_person_24.xml" value="0.1135" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/ic_restaurant.xml" value="0.1295" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/rectangle_btn_background.xml" value="0.1295" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/round_button.xml" value="0.16" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/solid_button.xml" value="0.1295" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/text_btn_background.xml" value="0.1295" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/white_grey_border_bottom.xml" value="0.1785" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activit_review_write_check.xml" value="0.1875" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_main.xml" value="0.24739583333333334" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_select_gallary.xml" value="0.25" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_select_search.xml" value="0.22" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_write.xml" value="0.20697463768115942" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_reviewinfo.xml" value="0.33" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_signup.xml" value="0.1890625" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_town.xml" value="0.17806484295845998" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_write.xml" value="0.16296296296296298" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/fragment_main_page.xml" value="0.24739583333333334" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/fragment_write.xml" value="0.1" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/layout_grid_imageview.xml" value="0.17806484295845998" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/my_toolbar.xml" value="0.17806484295845998" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/review_card.xml" value="0.1890625" />
-        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/snippet_top_gallerytoolbar.xml" value="0.1890625" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/circle_background.xml" value="0.1" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/round_button.xml" value="0.15" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activit_review_write_check.xml" value="0.17806484295845998" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_main.xml" value="0.11296859169199595" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_select_gallary.xml" value="0.11296859169199595" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_select_search.xml" value="0.11296859169199595" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_write.xml" value="0.25" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_reviewinfo.xml" value="0.22" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/fragment_reviewinfo.xml" value="0.17806484295845998" />
         <entry key="..\:/RingleaderFront-main/app/src/main/res/drawable-v24/ic_baseline_bar_chart_24.xml" value="0.183" />
         <entry key="..\:/RingleaderFront-main/app/src/main/res/drawable-v24/ic_baseline_home_24.xml" value="0.183" />
         <entry key="..\:/RingleaderFront-main/app/src/main/res/drawable-v24/ic_baseline_list_24.xml" value="0.183" />
@@ -59,14 +42,16 @@
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/drawable/ic_baseline_keyboard_arrow_right_24.xml" value="0.1" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/drawable/rectangle_btn_background.xml" value="0.1195" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/drawable/searchview_background.xml" value="0.1" />
+        <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/drawable/store_card_round.xml" value="0.1115" />
+        <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/drawable/store_category_round.xml" value="0.1115" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/drawable/text_btn_background.xml" value="0.122" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/drawable/white_grey_border_bottom.xml" value="0.1" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_first.xml" value="0.1" />
-        <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_login.xml" value="0.1" />
+        <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_login.xml" value="0.3333333333333333" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_main.xml" value="0.1" />
-        <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_select_gallary.xml" value="0.1" />
-        <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_select_search.xml" value="0.36666666666666664" />
-        <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_write.xml" value="0.1" />
+        <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_select_gallary.xml" value="0.16666666666666666" />
+        <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_select_search.xml" value="0.276657060518732" />
+        <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_write.xml" value="0.16666666666666666" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_reviewinfo.xml" value="0.12952898550724637" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_signup.xml" value="0.12318840579710146" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_town.xml" value="0.1" />
@@ -81,6 +66,7 @@
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/rectangle_btn_background.xml" value="0.1" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/review_card.xml" value="0.12318840579710146" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/snippet_top_gallerytoolbar.xml" value="0.1" />
+        <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/layout/store_list_item.xml" value="0.1" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/menu/bottom_nav_menu.xml" value="0.3333333333333333" />
         <entry key="..\:/ringLeader/lastMVP/RingleaderFront/ringLeader-master/app/src/main/res/menu/mainmenu.xml" value="0.1" />
         <entry key="..\:/ringLeaderFront/app/src/main/res/drawable-v24/ic_baseline_bar_chart_24.xml" value="0.1" />

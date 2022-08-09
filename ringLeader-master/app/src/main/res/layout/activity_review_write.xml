@@ -5,7 +5,6 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WriteReview.ReviewWriteActivity">
-
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
@@ -34,8 +33,9 @@
                 android:text="리뷰 쓰기"
                 android:textColor="@color/main_color"
                 android:textStyle="bold" />
-        </RelativeLayout>
 
+
+        </RelativeLayout>
 
         <ScrollView
             android:layout_width="match_parent"
@@ -46,10 +46,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent">
-
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray"/>
                 <HorizontalScrollView
                     android:id="@+id/review_photo"
                     android:layout_width="match_parent"
@@ -58,33 +60,47 @@
                     android:gravity="center">
 
                     <LinearLayout
-                        android:layout_width="wrap_content"
-                        android:layout_height="match_parent"
+                        android:id="@+id/review_write_ll"
+                        android:layout_width="match_parent"
+                        android:layout_height="150dp"
                         android:orientation="horizontal">
+                            <ImageButton
+                                android:id="@+id/review_write_ll_ib"
+                                android:background="@android:color/transparent"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/ic_baseline_add_24"
+                                android:visibility="visible"
+                                android:layout_gravity="center">
 
-                        <ImageView
-                            android:id="@+id/review_write_ll_iv1"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/image_sample" />
+                            </ImageButton>
+<!--                        <ImageView-->
+<!--                            android:id="@+id/review_write_ll_iv1"-->
+<!--                            android:layout_width="150dp"-->
+<!--                            android:layout_height="150dp"-->
+<!--                            android:src="@drawable/image_sample" />-->
 
-                        <ImageView
-                            android:id="@+id/review_write_ll_iv2"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/image_sample" />
+<!--                        <ImageView-->
+<!--                            android:id="@+id/review_write_ll_iv2"-->
+<!--                            android:layout_width="150dp"-->
+<!--                            android:layout_height="150dp"-->
+<!--                            android:src="@drawable/image_sample" />-->
 
 
-                        <ImageView
-                            android:id="@+id/review_write_ll_iv3"
-                            android:layout_width="150dp"
-                            android:layout_height="150dp"
-                            android:src="@drawable/image_sample" />
+<!--                        <ImageView-->
+<!--                            android:id="@+id/review_write_ll_iv3"-->
+<!--                            android:layout_width="150dp"-->
+<!--                            android:layout_height="150dp"-->
+<!--                            android:src="@drawable/image_sample" />-->
 
 
                     </LinearLayout>
-                </HorizontalScrollView>
 
+                </HorizontalScrollView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray"/>
 
                 <EditText
                     android:id="@+id/title_EditText"
@@ -104,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@color/gray"
-                    android:hint="#태그를_입력해_주세요"
+                    android:hint="#태그를_3개_입력해_주세요 (띄어쓰기로 구분)"
                     android:inputType="textShortMessage"
                     android:paddingHorizontal="30dp"
                     android:textColor="@color/main_color"
@@ -124,8 +140,7 @@
                     android:inputType="textMultiLine"
 
 
-                    android:maxLength="10000"
-                    android:minHeight="300dp"
+                    android:minHeight="500dp"
                     android:paddingHorizontal="30dp"
                     android:textSize="9pt"
 
@@ -136,9 +151,8 @@
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="match_parent"
-                    android:background="@color/gray"
-                    android:minHeight="80dp">
+                    android:layout_height="80dp"
+                    android:background="@color/gray">
 
                     <TextView
                         android:id="@+id/letter_count"
@@ -163,6 +177,7 @@
                         android:layout_marginEnd="20dp"
                         android:background="@drawable/button_back"
 
+
                         android:text="작성완료"
                         android:textColor="@color/white" />
 
@@ -171,6 +186,6 @@
 
             </LinearLayout>
         </ScrollView>
-
     </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
