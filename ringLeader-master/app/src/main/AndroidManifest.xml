@@ -28,6 +28,9 @@
             android:name=".WriteReview.ReviewSelectSearchActivity"
             android:exported="false" />
         <activity
+            android:name=".WriteReview.ReviewWriteCheckActivity"
+            android:exported="false" />
+        <activity
             android:name=".ReviewinfoActivity"
             android:exported="false" />
         <activity

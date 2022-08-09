@@ -1,13 +1,15 @@
 package com.example.ringleaderfront
 
+import android.net.Uri
 import java.io.Serializable
 
 data class ThemeReview(
-    var storeName:String,
+    var title: String?,
+    var storeName:String?,
     var catagory:String,
     var user: User?,
-    var tags:ArrayList<tag>?,
-    var image:String,
-    var text:String
-
+    var tags:List<String>?,
+    var date:String?,
+//    var imgUri: ArrayList<Uri>?,
+    var text:String?
 ): Serializable
