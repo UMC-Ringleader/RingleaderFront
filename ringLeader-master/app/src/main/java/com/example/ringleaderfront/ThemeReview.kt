@@ -12,4 +12,10 @@ data class ThemeReview(
     var date:String?,
 //    var imgUri: ArrayList<Uri>?,
     var text:String?
+    var title:String,
+    var tags:ArrayList<tag>?,
+    var images:ArrayList<Uri>?,
+    var review_text:String
+
+
 ): Serializable

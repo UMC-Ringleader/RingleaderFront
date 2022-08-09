@@ -19,6 +19,7 @@ class ReviewinfoActivity : AppCompatActivity() {
 
         val reviewIntent = intent.getSerializableExtra("review_content") as ThemeReview
 
+
         binding.titleText.text = reviewIntent.title
         binding.reviewShopName.text = reviewIntent.storeName
         binding.reviewText.text = reviewIntent.text
@@ -45,6 +46,14 @@ class ReviewinfoActivity : AppCompatActivity() {
 
         val backIntent = Intent(this, MainActivity::class.java)
         startActivity(backIntent)
+
+
+//
+//        binding.reviewShopName.text=reviewIntent.storeName
+//        binding.reviewText.text=reviewIntent.text
+//        binding.reviewTag1.text=reviewIntent.tags?.get(0)?.tagText
+//        binding.reviewTag2.text=reviewIntent.tags?.get(1)?.tagText
+//        binding.reviewTag3.text=reviewIntent.tags?.get(2)?.tagText
 
 
     }
