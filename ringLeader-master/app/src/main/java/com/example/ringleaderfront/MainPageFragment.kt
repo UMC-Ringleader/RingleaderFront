@@ -121,21 +121,21 @@ class MainPageFragment : Fragment() {
         Log.d("dummyTown1.themeReviews.size",dummyTown1.themeReviews?.size.toString())
 
         val reviewView1=getLayoutInflater().inflate(R.layout.review_card,null)
-        reviewView1.review_card_name.setText(dummyTown1.themeReviews?.get(0)?.storeName.toString())
+        reviewView1.review_card_store_name_tv.setText(dummyTown1.themeReviews?.get(0)?.storeName.toString())
         if (reviewView1.getParent() != null) {
             (reviewView1.getParent() as ViewGroup).removeView(reviewView1) // <- fix
         }
         binding.mainPageLl.addView(reviewView1)
 
         val reviewView2=getLayoutInflater().inflate(R.layout.review_card,null)
-        reviewView2.review_card_name.setText(dummyTown1.themeReviews?.get(1)?.storeName.toString())
+        reviewView2.review_card_store_name_tv.setText(dummyTown1.themeReviews?.get(1)?.storeName.toString())
         if (reviewView2.getParent() != null) {
             (reviewView2.getParent() as ViewGroup).removeView(reviewView2) // <- fix
         }
         binding.mainPageLl.addView(reviewView2)
 
         val reviewView3=getLayoutInflater().inflate(R.layout.review_card,null)
-        reviewView3.review_card_name.setText(dummyTown1.themeReviews?.get(2)?.storeName.toString())
+        reviewView3.review_card_store_name_tv.setText(dummyTown1.themeReviews?.get(2)?.storeName.toString())
         if (reviewView3.getParent() != null) {
             (reviewView3.getParent() as ViewGroup).removeView(reviewView3) // <- fix
         }
@@ -147,10 +147,6 @@ class MainPageFragment : Fragment() {
 //            startActivity(intent)
             val intent = Intent(getActivity(), ReviewSelectSearchActivity::class.java)
             startActivity(intent)
-
-
-
-
 
         }
 
