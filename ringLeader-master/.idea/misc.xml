@@ -3,6 +3,15 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/circle_background.xml" value="0.1" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/drawable/round_button.xml" value="0.15" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activit_review_write_check.xml" value="0.17806484295845998" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_main.xml" value="0.11296859169199595" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_select_gallary.xml" value="0.11296859169199595" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_select_search.xml" value="0.11296859169199595" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_review_write.xml" value="0.25" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/activity_reviewinfo.xml" value="0.22" />
+        <entry key="..\:/0719/RingleaderFront/ringLeader-master/app/src/main/res/layout/fragment_reviewinfo.xml" value="0.17806484295845998" />
         <entry key="..\:/RingleaderFront-main/app/src/main/res/drawable-v24/ic_baseline_bar_chart_24.xml" value="0.183" />
         <entry key="..\:/RingleaderFront-main/app/src/main/res/drawable-v24/ic_baseline_home_24.xml" value="0.183" />
         <entry key="..\:/RingleaderFront-main/app/src/main/res/drawable-v24/ic_baseline_list_24.xml" value="0.183" />
