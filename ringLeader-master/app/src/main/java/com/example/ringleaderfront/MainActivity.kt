@@ -7,6 +7,8 @@ import android.os.Handler
 import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ringleaderfront.MainPage.MainPageFragment
+import com.example.ringleaderfront.SearchPage.SearchFragment
 import com.example.ringleaderfront.databinding.ActivityMainBinding
 import com.example.ringleaderfront.databinding.MyToolbarBinding
 

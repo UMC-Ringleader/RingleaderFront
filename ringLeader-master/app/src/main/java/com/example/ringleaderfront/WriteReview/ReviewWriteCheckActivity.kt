@@ -6,8 +6,8 @@ import android.os.Bundle
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ringleaderfront.MainActivity
-import com.example.ringleaderfront.ReviewinfoActivity
 import com.example.ringleaderfront.ThemeReview
+import com.example.ringleaderfront.User
 import com.example.ringleaderfront.databinding.ActivitReviewWriteCheckBinding
 import com.example.ringleaderfront.tag
 import java.time.LocalDate
@@ -43,18 +43,41 @@ class ReviewWriteCheckActivity : AppCompatActivity() {
         binding.reviewWriteLlIv3.setImageURI(UriArray.get(2))
 
 
+//        var storeName:String,
+//        var catagory:String,
+//        var user: User?,
+//        var title:String,
+//        var tags:ArrayList<tag>?,
+//        var images:ArrayList<Uri>,
+//        var review_text:String
+        var tags1=ArrayList<tag>()
+        tags1.add(tag(tagData.get(0)))
+        tags1.add(tag(tagData.get(1)))
+        tags1.add(tag(tagData.get(2)))
+
+        var images1=ArrayList<Uri>()
+        images1.add(UriArray.get(0))
+        images1.add(UriArray.get(1))
+        images1.add(UriArray.get(2))
+
         var themeReview4 =
-            ThemeReview(titleText, query, "catagory5", null, tagData, todayDate, reviewText)
+            ThemeReview( query.toString(),
+                "catagory5",
+                null,
+                titleText.toString(),
+                tags1,
+                images1,
+                reviewText.toString())
 
 
-        binding.postBtn.setOnClickListener {
-            Toast.makeText(this, "작성 완료", Toast.LENGTH_SHORT).show()
-
-            val postCheck = Intent(this, ReviewinfoActivity::class.java)
-            postCheck.putExtra("review_content", themeReview4)
-            startActivity(postCheck)
-        }
-
+//        binding.postBtn.setOnClickListener {
+//            Toast.makeText(this, "작성 완료", Toast.LENGTH_SHORT).show()
+//
+//            val postCheck = Intent(this, ReviewinfoActivity::class.java)
+//            postCheck.putExtra("review_content", themeReview4)
+//            startActivity(postCheck)
+//        }
+//
         binding.reviewSelectSearchArrowIv.setOnClickListener{
             val backIntent = Intent(this, ReviewWriteActivity::class.java)
             startActivity(backIntent)

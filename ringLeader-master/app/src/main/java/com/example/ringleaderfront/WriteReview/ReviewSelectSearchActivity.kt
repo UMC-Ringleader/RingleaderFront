@@ -4,18 +4,11 @@ import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-import android.view.View
-import android.widget.AdapterView
-import android.widget.ArrayAdapter
 
 import android.widget.Toast
 import androidx.appcompat.widget.SearchView
-import com.example.ringleaderfront.R
 import com.example.ringleaderfront.Store
-import com.example.ringleaderfront.databinding.ActivityLoginBinding
 import com.example.ringleaderfront.databinding.ActivityReviewSelectSearchBinding
-import com.example.ringleaderfront.gallary.ReviewSelectGallaryActivity
-import com.example.ringleaderfront.MainActivity
 
 class ReviewSelectSearchActivity : AppCompatActivity() {
     lateinit var binding: ActivityReviewSelectSearchBinding
