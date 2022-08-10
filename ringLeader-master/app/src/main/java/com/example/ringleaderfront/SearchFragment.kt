@@ -1,50 +1,66 @@
 package com.example.ringleaderfront
+
 import android.R
+import android.content.Context
 import android.os.Bundle
+import android.view.ContextThemeWrapper
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.SearchView.*
 import androidx.fragment.app.Fragment
 import com.example.ringleaderfront.databinding.FragmentSearchBinding
 
-
 class SearchFragment : Fragment() {
 
+    lateinit var binding: FragmentSearchBinding
     override fun onCreateView(
-        inflater: LayoutInflater, container: ViewGroup?,
+        inflater: LayoutInflater,
+        container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        val binding= FragmentSearchBinding.inflate(inflater,container,false)
+        binding = FragmentSearchBinding.inflate(inflater, container, false)
 
-        var tags=arrayOf("스페인","와인","빠에야","정원","케이크")
-//        val tagsAdapter = ArrayAdapter(
-//            requireActivity()!!,
-//            R.layout.simple_list_item_1,
-//            tags
-//        )
-//        binding.searchLl.adapter=tagsAdapter
+//        val inflater = super.onGetLayoutInflater(savedInstanceState)
+//        val contextThemeWrapper: Context = ContextThemeWrapper(requireContext(), R.style.yourCustomTheme)
+//        return inflater.cloneInContext(contextThemeWrapper)
 
-        binding.searchSv.setOnQueryTextListener(object: OnQueryTextListener,
-            androidx.appcompat.widget.SearchView.OnQueryTextListener {
-            override fun onQueryTextSubmit(query: String?): Boolean {
-                binding.searchSv.clearFocus()
-                if(tags.contains(query)){
-                    //tag를 찾아서 tag가 있으면 해당 뷰를 addView로 보여줌
-                    //tagsAdapter.filter.filter(query)
-                }
-                return false
-            }
 
-            override fun onQueryTextChange(newText: String?): Boolean {
-                //tagsAdapter.filter.filter(newText)
-                return false
-            }
-
-        })
-
+//        createPopularSearchBtn("파스타")
+//        createPopularSearchBtn("샐러드")
+//        createPopularSearchBtn("칵테일")
+//        createPopularSearchBtn("케이크")
+//        createPopularSearchBtn("이자카야")
+//
+//        createRecentSearchBtn("홍대밥집")
+//        createRecentSearchBtn("디저트맛집")
+//        createRecentSearchBtn("식재료마트")
+//        createRecentSearchBtn("훈제치킨")
+//        createRecentSearchBtn("통닭")
+//        createRecentSearchBtn("도시락배달")
 
         return binding.root
+
     }
+
+//    private fun createPopularSearchBtn(btnText: String) {
+//        val newStyle =
+//            ContextThemeWrapper(this, com.example.ringleaderfront.R.style.popular_search_btn)
+//        val dynamicButton = Button(newStyle)
+//        dynamicButton.text = btnText
+//        binding.popularSearchBtnView.addView(dynamicButton)
+//    }
+//
+//    private fun createRecentSearchBtn(btnText: String) {
+//        val savedInstanceState: Bundle?
+//        val inflater = super.onGetLayoutInflater(savedInstanceState)
+//        val themedInflater = inflater.cloneInContext(ContextThemeWrapper(requireActivity(), R.style.recent_search_btn))
+//        val dynamicButton = Button(newStyle)
+//        dynamicButton.text = btnText
+//        binding.recentSearchBtnView.addView(dynamicButton)
+//    }
+
+
 }
+

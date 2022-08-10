@@ -1,72 +1,140 @@
+<?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent"
+    android:layout_height="match_parent">
 
-    xmlns:app="http://schemas.android.com/apk/res-auto">
-    <androidx.constraintlayout.widget.ConstraintLayout
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="wrap_content">
-<!--        <TextView-->
-<!--            android:id="@+id/search_tv_town"-->
-<!--            app:layout_constraintTop_toTopOf="parent"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="wrap_content"-->
-<!--            android:layout_marginTop="20dp"-->
-<!--            android:text="경리단길"-->
-<!--            android:textSize="50dp"-->
-<!--            android:textAlignment="center"-->
-<!--            android:gravity="center"-->
-<!--            android:textColor="@color/black"/>-->
-<!--        <View-->
-<!--            android:id="@+id/search_town_line"-->
-<!--            android:layout_marginBottom="10dp"-->
-<!--            app:layout_constraintTop_toBottomOf="@id/search_tv_town"-->
-<!--            android:background="#000000"-->
-<!--            android:layout_width="match_parent"-->
-<!--            android:layout_height="10px"/>-->
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
-
-        <androidx.appcompat.widget.SearchView
-            android:id="@+id/search_sv"
-            android:layout_width="360dp"
-            android:layout_height="56dp"
-
-            android:layout_marginTop="8dp"
-            android:background="@drawable/searchview_background"
-            app:iconifiedByDefault="false"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent"
-            app:queryBackground="@android:color/transparent"
-            app:queryHint="검색어를 입력하세요" />
-
-        <FrameLayout
-            android:id="@+id/search_fl"
-            app:layout_constraintTop_toTopOf="parent"
+        <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="60dp"
+            android:orientation="horizontal">
 
-            <ScrollView
-                android:layout_width="match_parent"
+            <TextView
+                android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="검색"
+                android:textColor="@color/main_color"
+                android:textStyle="bold" />
+        </RelativeLayout>
 
-                app:layout_constraintTop_toBottomOf="@id/search_sv"
-                >
-                <LinearLayout
-                    android:id="@+id/search_ll"
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/gray" />
 
-                    android:orientation="vertical"
-                    android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal">
 
-                </LinearLayout>
+            <androidx.appcompat.widget.SearchView
+                android:id="@+id/review_search_sv"
+                android:layout_width="300dp"
+                android:layout_height="50dp"
+                app:iconifiedByDefault="false"
+                app:queryBackground="@color/gray"
+                app:queryHint="검색해 보세요"
+                app:searchIcon="@null" />
 
-            </ScrollView>
 
-        </FrameLayout>
+            <ImageButton
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_gravity="bottom"
+                android:background="@drawable/circle_background"
+                android:backgroundTint="@color/main_color"
+                android:paddingHorizontal="6dp"
+                android:scaleType="fitCenter"
+                android:src="@drawable/ic_baseline_search_24"/>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="300dp"
+            android:layout_height="2dp"
+            android:layout_marginStart="30dp"
+            android:background="@color/main_color" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="50dp"
+            android:text="인기 검색어"
+            android:textColor="@color/main_color"
+            android:textSize="6pt"
+            android:textStyle="bold" />
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="40dp"
+            android:fillViewport="true"
+            android:gravity="center"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:id="@+id/popular_search_btn_view"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="bottom"
+                android:orientation="horizontal">
 
 
-    </androidx.constraintlayout.widget.ConstraintLayout>
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <RelativeLayout
+            android:layout_marginTop="50dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="40dp"
+                android:text="최근 검색어"
+                android:textColor="@color/main_color"
+                android:textSize="6pt"
+                android:textStyle="bold" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="30dp"
+                android:background="@color/gray"
+                android:minHeight="30dp"
+                android:text="모두 지우기"
+                android:textColor="@color/dark_gray" />
+
+        </RelativeLayout>
+
+
+        <GridLayout
+            android:layout_marginTop="10dp"
+            android:id="@+id/recent_search_btn_view"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:columnCount="2"
+            android:orientation="horizontal"
+            android:rowCount="3">
+
+
+        </GridLayout>
+
+    </LinearLayout>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
