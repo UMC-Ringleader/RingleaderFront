@@ -1,4 +1,5 @@
 package com.example.ringleaderfront
+
 import android.content.Intent
 import android.graphics.drawable.Drawable
 import android.net.Uri
@@ -16,47 +17,18 @@ import com.example.ringleaderfront.databinding.FragmentMainPageBinding
 import kotlinx.android.synthetic.main.review_card.view.*
 
 class MainPageFragment : Fragment() {
-    lateinit var town:Town
+    lateinit var town: Town
 
     //retrofit
-    lateinit var themeReviews:List<ThemeReview>
-    
-    //WriteActivity에서 bundle객체 받기
-    companion object {
-        const val ARG_NAME = "name"
-        fun newInstance(name: String): MainPageFragment {
-            Log.d("order_newInstance","newInstance 함수 들어옴")
-            val fragment = MainPageFragment()
-            val bundle = Bundle().apply {
-                putString(ARG_NAME, name)
-                Log.d("newInstance_bundle_name",name)
-            }
-            fragment.arguments = bundle
-            return fragment
-        }
-//        fun newInstance(name: String) = MainPageFragment().apply {
-//            arguments = Bundle().apply {
-//                putString(ARG_NAME, name)
-//                Log.d("newInstance_bundle_name",name)
-//
-//            }
-//            Log.d("order_newInstance_finish","finish")
-//        }
+    lateinit var themeReviews: List<ThemeReview>
 
-//        fun newInstance(name: String) = this.apply {
-//            val args = Bundle()
-//            args.putString(ARG_NAME, name)
-//            this.arguments = args
-//            Log.d("this.arguments",this.arguments.toString())
-//            return this
-//        }
-    }
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-       val binding=FragmentMainPageBinding.inflate(inflater,container,false)
-        Log.d("order_OnCreateView","OnCreateView실행")
+        val binding = FragmentMainPageBinding.inflate(inflater, container, false)
+        Log.d("order_OnCreateView", "OnCreateView실행")
 //        arguments?.let{
 //            val name=it.getString(ARG_NAME)
 //            Log.d("apply_bundle?",name.toString())
@@ -96,8 +68,54 @@ class MainPageFragment : Fragment() {
 //        }
 
 
-
         //Dummytown
+
+//        var dummyTown1 = Town("경리단길", ArrayList())
+
+//        var tagExample = "tag1 tag2 tag3"
+//        var tagExampe_split = tagExample.split(" ")
+//        var themeReview1 = ThemeReview(
+//            "제목1",
+//            "상점1",
+//            "catagory1",
+//            null,
+//            tagExampe_split,
+//            "2022-0n-0n",
+//            "text1"
+//        )
+//        var themeReview2 = ThemeReview(
+//            "제목2",
+//            "상점2",
+//            "catagory2",
+//            null,
+//            tagExampe_split,
+//            "2022-0n-0n",
+//            "text2"
+//        )
+//        var themeReview3 = ThemeReview(
+//            "제목3",
+//            "상점3",
+//            "catagory3",
+//            null,
+//            tagExampe_split,
+//            "2022-0n-0n",
+//            "text3"
+//        )
+
+//
+//
+//        dummyTown1.themeReviews?.add(themeReview1)
+//        dummyTown1.themeReviews?.add(themeReview2)
+//        dummyTown1.themeReviews?.add(themeReview3)
+
+
+        //Log.d("dummyTown1.themeReviews.size", dummyTown1.themeReviews?.size.toString())
+//
+//        val reviewView1 = getLayoutInflater().inflate(R.layout.review_card, null)
+//        reviewView1.review_card_name.setText(dummyTown1.themeReviews?.get(0)?.storeName.toString())
+//        if (reviewView1.getParent() != null) {
+//            (reviewView1.getParent() as ViewGroup).removeView(reviewView1) // <- fix
+
         var dummyTown1=Town("이태원", ArrayList())
 //        var storeName:String,
 //        var catagory:String,
@@ -210,7 +228,23 @@ class MainPageFragment : Fragment() {
                 }
                 binding.mainPageLl.addView(reviewView1)
             }
+
         }
+
+
+        val reviewView2 = getLayoutInflater().inflate(R.layout.review_card, null)
+        reviewView2.review_card_name.setText(dummyTown1.themeReviews?.get(1)?.storeName.toString())
+        if (reviewView2.getParent() != null) {
+            (reviewView2.getParent() as ViewGroup).removeView(reviewView2) // <- fix
+        }
+        binding.mainPageLl.addView(reviewView2)
+
+        val reviewView3 = getLayoutInflater().inflate(R.layout.review_card, null)
+        reviewView3.review_card_name.setText(dummyTown1.themeReviews?.get(2)?.storeName.toString())
+        if (reviewView3.getParent() != null) {
+            (reviewView3.getParent() as ViewGroup).removeView(reviewView3) // <- fix
+        }
+        binding.mainPageLl.addView(reviewView3)
 
 
 
@@ -228,6 +262,7 @@ class MainPageFragment : Fragment() {
 //        }
 //        binding.mainPageLl.addView(reviewView3)
 
+
 //floating button 글 작성 버튼
         binding.extendedFab.setOnClickListener {
 //            val intent = Intent(getActivity(), WriteActivity::class.java)
@@ -235,7 +270,47 @@ class MainPageFragment : Fragment() {
             val intent = Intent(getActivity(), ReviewSelectSearchActivity::class.java)
             startActivity(intent)
 
+
+
         }
+
+
+        //각 리뷰에 onClickListener 달아주기
+        val icount: Int = binding.mainPageLl.getChildCount()
+        for (i in 0 until icount) {
+            binding.mainPageLl.getChildAt(i).setOnClickListener {
+                val intent = Intent(getActivity(), ReviewinfoActivity::class.java)
+                Log.d("view_select", i.toString() + "번째 view 선택!")
+                intent.putExtra("review_content", dummyTown1.themeReviews?.get(i))
+                startActivity(intent)
+            }
+        }
+
+
+//        binding.mainPageLl.setOnClickListener {
+//            val intent = Intent(getActivity(), ReviewinfoActivity::class.java)
+//            startActivity(intent)
+//
+//        }
+
+
+        //bundle 값 받기
+
+//        val townBundle = arguments
+//        if (townBundle != null) {
+//            val data = townBundle.getSerializable("townBundle")
+//
+//        }
+
+        //bundle에서 값 꺼내기
+
+
+        val townBundleName = arguments?.getString("townBundleName")
+        //Log.d("townBundleName fragment에서 꺼내기",townBundleName.toString())
+
+
+
+
 
 
 
@@ -249,6 +324,7 @@ class MainPageFragment : Fragment() {
 //                startActivity(intent)
 //            }
 //        }
+
 
         return binding.root
     }
