@@ -1,6 +1,7 @@
 package com.example.ringleaderfront.MainPage
 import android.content.Context
 import android.content.Intent
+import android.graphics.drawable.GradientDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -204,18 +205,44 @@ class MainPageFragment : Fragment() ,Serializable{
             for(i in 0 until dummyTown1.themeReviews?.size!!){
                 val reviewView1=getLayoutInflater().inflate(R.layout.review_card,null)
 
+                //card에 margin부여
+                val cardLayoutParams=LinearLayout.LayoutParams(  LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT)
+                cardLayoutParams.setMargins(30,35,30,35)
+                reviewView1.layoutParams=cardLayoutParams
+
+
+
                 val review_i=dummyTown1.themeReviews?.get(i)
+
+                //card에 카테고리별 색상 부여
+                var category=review_i?.catagory
+                when(category){
+                    "음식점"->{reviewView1.review_card_category_ll.setBackgroundColor(resources.getColor(R.color.cata_restaurant))
+                        reviewView1.review_card_cl.setBackgroundColor(resources.getColor(R.color.back_restaurant))}
+                    "카페"->{reviewView1.review_card_category_ll.setBackgroundColor(resources.getColor(R.color.cata_cafe))
+                        reviewView1.review_card_cl.setBackgroundColor(resources.getColor(R.color.back_cafe)) }
+                    "주점"->{reviewView1.review_card_category_ll.setBackgroundColor(resources.getColor(R.color.cata_pub))
+                        reviewView1.review_card_cl.setBackgroundColor(resources.getColor(R.color.back_pub)) }
+                    "놀거리"->{reviewView1.review_card_category_ll.setBackgroundColor(resources.getColor(R.color.cata_play))
+                        reviewView1.review_card_cl.setBackgroundColor(resources.getColor(R.color.back_play)) }
+                    "생활시설"->{reviewView1.review_card_category_ll.setBackgroundColor(resources.getColor(R.color.cata_life))
+                        reviewView1.review_card_cl.setBackgroundColor(resources.getColor(R.color.back_life)) }
+                }
+
 
                 reviewView1.review_card_store_name_tv.setText(review_i?.storeName.toString())
                 reviewView1.review_card_category_tv.setText(review_i?.catagory)
                 reviewView1.review_card_review_title_tv.setText(review_i?.title)
-                reviewView1.review_card_tags_ll.removeAllViews()
 
+
+                reviewView1.review_card_tags_ll.removeAllViews()
                 //tag부분
                 review_i?.tags?.let{
                     for(tag in it) {
                         val layoutParams=LinearLayout.LayoutParams(  LinearLayout.LayoutParams.WRAP_CONTENT,
                             LinearLayout.LayoutParams.WRAP_CONTENT)
+
                         val tagTextView = TextView(context)
                         tagTextView.text=tag.tagText
                         reviewView1.review_card_tags_ll.addView(tagTextView)
