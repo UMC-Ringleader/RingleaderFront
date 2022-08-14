@@ -13,4 +13,20 @@
     <color name="clear">#00ffffff</color>
     <color name="dark_gray">#A9A9A9</color>
     <color name="link_blue">#4d94ff</color>
+
+    <color name="cata_restaurant">#FF6A49</color>
+    <color name="cata_cafe">#71480A</color>
+    <color name="cata_pub">#5D5BC5</color>
+    <color name="cata_play">#F8C543</color>
+    <color name="cata_life">#1F9B15</color>
+
+    <color name="back_restaurant">#FFFAF9</color>
+    <color name="back_cafe">#FFFCF8</color>
+    <color name="back_pub">#F0F0FF</color>
+    <color name="back_play">#FFFCF3</color>
+    <color name="back_life">#F7FFF6</color>
+
+
+
+
 </resources>
