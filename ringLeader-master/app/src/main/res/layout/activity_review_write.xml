@@ -33,6 +33,8 @@
                 android:text="리뷰 쓰기"
                 android:textColor="@color/main_color"
                 android:textStyle="bold" />
+
+
         </RelativeLayout>
 
         <ScrollView
@@ -44,10 +46,12 @@
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:layout_marginTop="10dp"
                 android:orientation="vertical"
                 app:layout_constraintBottom_toBottomOf="parent">
-
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray"/>
                 <HorizontalScrollView
                     android:id="@+id/review_photo"
                     android:layout_width="match_parent"
@@ -91,8 +95,12 @@
 
 
                     </LinearLayout>
-                </HorizontalScrollView>
 
+                </HorizontalScrollView>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray"/>
 
                 <EditText
                     android:id="@+id/title_EditText"
@@ -112,7 +120,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="40dp"
                     android:background="@color/gray"
-                    android:hint="#태그를_입력해_주세요"
+                    android:hint="#태그를_3개_입력해_주세요 (띄어쓰기로 구분)"
                     android:inputType="textShortMessage"
                     android:paddingHorizontal="30dp"
                     android:textColor="@color/main_color"
@@ -132,7 +140,7 @@
                     android:inputType="textMultiLine"
 
 
-                    android:minHeight="300dp"
+                    android:minHeight="500dp"
                     android:paddingHorizontal="30dp"
                     android:textSize="9pt"
 
@@ -155,7 +163,7 @@
                         android:layout_centerVertical="true"
 
                         android:layout_marginStart="20dp"
-                        android:hint="(0/100,000)" />
+                        android:hint="(0/10,000)" />
 
 
                     <androidx.appcompat.widget.AppCompatButton
@@ -165,8 +173,7 @@
 
                         android:layout_height="40dp"
                         android:layout_alignParentEnd="true"
-                        android:layout_centerVertical="true"
-                        android:layout_marginEnd="20dp"
+                        android:layout_marginEnd="18dp"
                         android:background="@drawable/button_back"
 
 

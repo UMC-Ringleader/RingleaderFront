@@ -5,8 +5,12 @@ import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import android.view.ContextThemeWrapper
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ringleaderfront.MainPage.MainPageFragment
+import com.example.ringleaderfront.SearchPage.SearchFragment
 import com.example.ringleaderfront.databinding.ActivityMainBinding
 import com.example.ringleaderfront.databinding.MyToolbarBinding
 
@@ -51,8 +55,9 @@ class MainActivity : AppCompatActivity() {
         Log.d("writeToMain","setWriteToMain에서 값"+writeToMain.toString())
     }
 
-     fun transactionMainPageFragment() {
+    fun transactionMainPageFragment() {
         val name="main_activity_apply_bundle"
+
         val fragment: MainPageFragment = MainPageFragment.newInstance(name)
         val header = getLayoutInflater().inflate(R.layout.activity_main, null, false)
         supportFragmentManager.beginTransaction().replace(
@@ -111,7 +116,7 @@ class MainActivity : AppCompatActivity() {
         //sendToFragment(townIntent)
         //툴바 장소text set
         //Log.d("toolbar_text", toolbarBinding.myToolbarTv.text.toString())
-       // Log.d("townIntent.name",townIntent?.name!!)
+        // Log.d("townIntent.name",townIntent?.name!!)
         var myToolbarTv=findViewById<TextView>(R.id.my_toolbar_tv)
         val mUpdateUITimerTask = Runnable { // do whatever you want to change here, like:
             //toolbarBinding.myToolbarTv.text=townIntent.name
@@ -170,11 +175,14 @@ class MainActivity : AppCompatActivity() {
 
 
 
-   override fun onResume(){
+    override fun onResume(){
         super.onResume()
         getmyIntent()
         //getWriteIntent()
-   }
+    }
+
+
+
 
 //    private fun getWriteIntent() {
 //        Log.d("getWriteIntent함수","진입")

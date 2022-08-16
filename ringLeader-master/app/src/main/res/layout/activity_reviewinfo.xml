@@ -1,186 +1,539 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
-
-    <androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_height="match_parent"
+    tools:context=".WriteReview.ReviewWriteCheckActivity">
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:orientation="horizontal">
+
+            <ImageButton
+                android:id="@+id/review_select_search_arrow_iv"
+                android:layout_width="38dp"
+                android:layout_height="32dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="15dp"
+                android:layout_marginTop="15dp"
+                android:background="@android:color/transparent"
+                android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="20dp"
+                android:text="리뷰"
+                android:textColor="@color/main_color"
+                android:textStyle="bold" />
+        </RelativeLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical">
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:background="@color/gray"/>
 
 
-        <ImageView
-            android:id="@+id/review_profileImg"
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:layout_marginStart="50dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/image_sample"
+                <HorizontalScrollView
+                    android:id="@+id/review_photo"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fillViewport="true"
+                    android:gravity="center">
 
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toTopOf="parent" />
+                    <LinearLayout
+                        android:id="@+id/activity_reviewinfo_iv_ll"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal">
 
+                        <ImageView
+                            android:id="@+id/review_ll_iv1"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:src="@drawable/image_sample" />
 
-        <TextView
-            android:id="@+id/reviewProfileName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginStart="30dp"
-            android:paddingBottom="10dp"
-            android:text="Royce, 85"
-            android:textSize="30dp"
-
-            app:layout_constraintBottom_toBottomOf="@id/review_profileImg"
-            app:layout_constraintStart_toEndOf="@id/review_profileImg" />
-
-        <View
-            android:id="@+id/review_Bar"
-            android:layout_width="350dp"
-            android:layout_height="2dp"
-            android:layout_marginStart="30dp"
-            android:layout_marginTop="10dp"
-            android:background="@color/black"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/reviewProfileName" />
-
-        <TextView
-            android:id="@+id/review_shopName"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="20dp"
-            android:text="타파스파"
-            android:textColor="@color/black"
-            android:textSize="35sp"
-
-            app:layout_constraintStart_toStartOf="@id/review_Bar"
-            app:layout_constraintTop_toBottomOf="@id/review_Bar" />
-
-        <TextView
-            android:id="@+id/review_shopType"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="35dp"
-            android:layout_marginEnd="40dp"
-            android:text="음식점"
-            android:textColor="@color/gray"
-            android:textSize="25sp"
-
-            app:layout_constraintEnd_toEndOf="@id/review_Bar"
-            app:layout_constraintTop_toBottomOf="@id/review_Bar" />
-
-        <TextView
-            android:id="@+id/review_tag1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="80dp"
-            android:background="@color/gray"
-            android:text="스페인"
-            android:textSize="20sp"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/review_shopName" />
-
-        <TextView
-            android:id="@+id/review_tag2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:background="@color/gray"
-            android:text="빠에야"
-            android:textSize="20sp"
-
-            app:layout_constraintEnd_toStartOf="@id/review_tag3"
-            app:layout_constraintStart_toEndOf="@id/review_tag1"
-            app:layout_constraintTop_toTopOf="@id/review_tag1" />
-
-        <TextView
-            android:id="@+id/review_tag3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:background="@color/gray"
-            android:layout_marginEnd="80dp"
-            android:text="와인"
-            android:textSize="20sp"
-
-            app:layout_constraintTop_toTopOf="@id/review_tag1"
-            app:layout_constraintEnd_toEndOf="parent"/>
-
-        <ImageView
-            android:id="@+id/review_reviewImg"
-            android:layout_width="300dp"
-            android:layout_height="270dp"
-            android:layout_marginTop="30dp"
-            android:src="@drawable/image_sample"
-
-            app:layout_constraintTop_toBottomOf="@id/review_tag1"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            />
-
-        <TextView
-            android:id="@+id/review_text"
-            android:layout_width="350dp"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="30dp"
-            android:paddingHorizontal="20dp"
-            android:background="@color/gray"
-            android:textSize="28sp"
-            android:text="지나갈때마다 가보고싶었던.. 이태원 스페인요리 전문점 타파스파~~ 타파스어쩌고 저쩌고 어렵다,,, 리뷰리뷰리뷰리뷰리뷰 이것은 리뷰입니다 감사합니다. 맛있겠다.. 배고프다.. 어쩌고 저쩌고 리뷰끝."
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/review_reviewImg"/>
-
-        <Button
-            android:id="@+id/review_reaction1"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="80dp"
-            android:background="@color/gray"
-            android:text="좋아요 (12)"
-            android:textSize="15sp"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/review_text" />
-
-        <Button
-            android:id="@+id/review_reaction2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="20dp"
-            android:layout_marginEnd="80dp"
-            android:background="@color/gray"
-            android:text="도움돼요 (3)"
-            android:textSize="15sp"
-
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/review_text" />
-
-        <Button
-            android:id="@+id/review_reaction3"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-
-            android:layout_marginTop="20dp"
-            android:layout_marginStart="120dp"
-            android:background="@color/gray"
-            android:text="정확한 정보예요 (5)"
-            android:textSize="15sp"
-
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@id/review_reaction1" />
-
-    </androidx.constraintlayout.widget.ConstraintLayout>
+                        <ImageView
+                            android:id="@+id/review_ll_iv2"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:src="@drawable/image_sample" />
 
 
-</ScrollView>
+                        <ImageView
+                            android:id="@+id/review_ll_iv3"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:src="@drawable/image_sample" />
+
+                        <ImageView
+                            android:id="@+id/review_ll_iv4"
+                            android:layout_width="130dp"
+                            android:layout_height="130dp"
+                            android:src="@drawable/image_sample" />
+
+
+                    </LinearLayout>
+                </HorizontalScrollView>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="30dp"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:id="@+id/review_category_button"
+                        android:layout_width="wrap_content"
+                        android:layout_height="33dp"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginStart="20dp"
+                        android:background="@drawable/round_button"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:text="음식점"
+                        android:textSize="4.5pt"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/main_color"
+                        app:icon="@drawable/ic_baseline_add_24"
+                        app:iconPadding="0dp"
+                        app:iconSize="11dp" />
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+
+                        android:layout_marginStart="10dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/review_shopName"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+
+                            android:text="가게이름"
+                            android:textColor="@color/dark_gray"
+                            android:textSize="5pt"
+
+                            app:layout_constraintStart_toStartOf="@id/review_Bar"
+                            app:layout_constraintTop_toBottomOf="@id/review_Bar" />
+
+                        <TextView
+                            android:id="@+id/title_text"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="제목입니다"
+                            android:textColor="@color/black"
+                            android:textSize="9pt"
+                            android:textStyle="bold" />
+
+                        <LinearLayout
+                            android:id="@+id/activity_reviewinfo_tags_ll"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:id="@+id/review_tag1"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="#스페인"
+                                android:textColor="@color/main_color"
+                                android:textSize="7pt" />
+
+                            <TextView
+                                android:id="@+id/review_tag2"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="#빠에야"
+                                android:textColor="@color/main_color"
+                                android:textSize="7pt" />
+
+                            <TextView
+                                android:id="@+id/review_tag3"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginStart="10dp"
+                                android:text="#와인"
+                                android:textColor="@color/main_color"
+                                android:textSize="7pt"
+
+                                />
+                        </LinearLayout>
+
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginTop="10dp"
+                            android:orientation="horizontal">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="(조회수랑 반응 등등 넣을 자리)"
+                                android:textColor="@color/dark_gray"
+                                android:textSize="7pt" />
+                        </LinearLayout>
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginTop="30dp"
+                    android:layout_marginEnd="20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:id="@+id/review_profileImg"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        android:background="@drawable/circle_background"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/profile_sample" />
+
+                    <TextView
+                        android:id="@+id/reviewProfileName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:text="작성자이름"
+                        android:textColor="@color/black"
+                        android:textSize="7pt" />
+
+                    <ImageView
+                        android:id="@+id/badge_img"
+                        android:layout_width="30dp"
+                        android:layout_height="30dp"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="10dp"
+                        android:background="@drawable/circle_background"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/image_sample" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="30dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="30dp"
+                        android:background="@drawable/round_button"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:text="북마크"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="7pt"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/white"
+                        app:icon="@drawable/ic_baseline_add_24"
+                        app:iconGravity="top"
+                        app:iconPadding="0dp"
+                        app:iconSize="50dp"
+                        app:iconTint="@color/dark_gray" />
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:background="@drawable/round_button"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:text="팔로우"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="7pt"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/white"
+                        app:icon="@drawable/ic_baseline_add_24"
+                        app:iconGravity="top"
+                        app:iconPadding="0dp"
+                        app:iconSize="50dp"
+                        app:iconTint="@color/dark_gray" />
+
+                    <com.google.android.material.button.MaterialButton
+                        style="@style/Widget.AppCompat.Button.Borderless"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_horizontal"
+                        android:layout_marginHorizontal="30dp"
+                        android:background="@drawable/round_button"
+                        android:minWidth="0dp"
+                        android:minHeight="0dp"
+                        android:text="리스트"
+                        android:textColor="@color/dark_gray"
+                        android:textSize="7pt"
+                        android:textStyle="bold"
+                        app:backgroundTint="@color/white"
+                        app:icon="@drawable/ic_baseline_add_24"
+                        app:iconGravity="top"
+                        app:iconPadding="0dp"
+                        app:iconSize="50dp"
+                        app:iconTint="@color/dark_gray" />
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="10dp"
+                    android:background="@color/gray" />
+
+                <TextView
+                    android:id="@+id/today_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginVertical="30dp"
+                    android:layout_marginStart="30dp"
+                    android:text="yyyy-mm-dd(날짜)"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="7pt" />
+
+                <TextView
+                    android:id="@+id/review_text"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginHorizontal="30dp"
+                    android:text="지나갈 때마다 가 보고 싶었던...
+이태원 스페인요리 전문점 타파스바!
+타파스는 스페인에서 식사 전에 술이랑 간단히 곁들여먹는 소량의 음식을 뜻하지요.
+타파스바는 타파스 종류가 엄청나게 다양하더라구요
+저흰 이베리코 스테이크랑 크림새우그라탕 먹고와떠요
+타파스바 가격대는 저렴하더라구요 거의 보통 만원 이하!
+분위기 넘나 좋은 이태원 스페인요리 전문점이랍니다
+테이블이 다닥다닥 붙어있고
+살짝 시끌벅적한 분위기였어염
+이베리코 스테이크는 감동 그 자체..
+엄청 부드럽고 맛있었어요
+무엇보다 소스가 대박이었음ㅋㅋ
+자꾸만 퍼먹게 되는 마법의 소스ㅋㅋㅋ
+tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
+골목으로 우회전 하신 후 올라가서
+바로 좌회전 하시면 됩니다!
+지도 참고하세요 :D"
+                    android:textColor="@color/black"
+                    android:textSize="8pt" />
+
+
+                <com.google.android.material.button.MaterialButton
+                    android:layout_width="wrap_content"
+                    style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="end"
+                    android:layout_marginHorizontal="30dp"
+                    android:layout_marginTop="30dp"
+                    android:background="@drawable/round_button"
+                    android:minHeight="0dp"
+                    android:text="리뷰 신고하기"
+                    android:textColor="@color/dark_gray"
+                    android:textSize="6pt"
+                    app:backgroundTint="@color/white"
+                    app:icon="@drawable/ic_baseline_add_24"
+                    app:iconGravity="start"
+                    app:iconPadding="0dp"
+                    app:iconSize="20dp"
+                    app:iconTint="@color/dark_gray" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="2dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/gray"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_marginVertical="30dp"
+                    android:gravity="center">
+
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/round_button"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:gravity="center"
+                            android:shadowColor="@color/main_color"
+                            android:text="좋아요"
+                            android:textColor="@color/main_color"
+                            android:textSize="7pt"
+                            app:backgroundTint="@color/white"
+                            app:icon="@drawable/ic_baseline_add_24"
+                            app:iconGravity="top"
+                            app:iconPadding="0dp"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/main_color" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="00"
+                            android:textColor="@color/main_color"
+                            android:textSize="9pt"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/round_button"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:gravity="center"
+                            android:shadowColor="@color/main_color"
+                            android:text="정확해요"
+                            android:textColor="@color/main_color"
+                            android:textSize="7pt"
+                            app:backgroundTint="@color/white"
+                            app:icon="@drawable/ic_baseline_add_24"
+                            app:iconGravity="top"
+                            app:iconPadding="0dp"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/main_color" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="00"
+                            android:textColor="@color/main_color"
+                            android:textSize="9pt"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/round_button"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:gravity="center"
+                            android:shadowColor="@color/main_color"
+                            android:text="공감돼요"
+                            android:textColor="@color/main_color"
+                            android:textSize="7pt"
+                            app:backgroundTint="@color/white"
+                            app:icon="@drawable/ic_baseline_add_24"
+                            app:iconGravity="top"
+                            app:iconPadding="0dp"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/main_color" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="00"
+                            android:textColor="@color/main_color"
+                            android:textSize="9pt"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+                    <LinearLayout
+                        android:layout_width="90dp"
+                        android:layout_height="wrap_content"
+                        android:layout_marginHorizontal="10dp"
+                        android:orientation="vertical">
+
+                        <com.google.android.material.button.MaterialButton
+                            style="@style/Widget.AppCompat.Button.Borderless"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:background="@drawable/round_button"
+                            android:minHeight="0dp"
+                            android:minWidth="0dp"
+                            android:gravity="center"
+                            android:shadowColor="@color/main_color"
+                            android:text="도움돼요"
+                            android:textColor="@color/main_color"
+                            android:textSize="7pt"
+                            app:backgroundTint="@color/white"
+                            app:icon="@drawable/ic_baseline_add_24"
+                            app:iconGravity="top"
+                            app:iconPadding="0dp"
+                            app:iconSize="45dp"
+                            app:iconTint="@color/main_color" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="center"
+                            android:text="00"
+                            android:textColor="@color/main_color"
+                            android:textSize="9pt"
+                            android:textStyle="bold" />
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:background="@color/gray"/>
+            </LinearLayout>
+
+
+        </ScrollView>
+
+    </LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

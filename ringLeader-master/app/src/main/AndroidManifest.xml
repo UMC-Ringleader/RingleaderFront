@@ -28,8 +28,9 @@
             android:name=".WriteReview.ReviewSelectSearchActivity"
             android:exported="false" />
         <activity
-            android:name=".ReviewinfoActivity"
+            android:name=".WriteReview.ReviewWriteCheckActivity"
             android:exported="false" />
+
         <activity
             android:name=".UsernameActivity"
             android:exported="false" />
@@ -41,6 +42,9 @@
             android:exported="false" />
         <activity
             android:name=".WriteActivity"
+            android:exported="false" />
+        <activity
+            android:name=".MainPage.ReviewinfoActivity"
             android:exported="false" />
         <activity
             android:name=".FirstActivity"
