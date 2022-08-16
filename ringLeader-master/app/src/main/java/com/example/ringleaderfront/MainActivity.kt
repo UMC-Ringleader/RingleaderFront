@@ -5,8 +5,12 @@ import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import android.view.ContextThemeWrapper
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ringleaderfront.MainPage.MainPageFragment
+import com.example.ringleaderfront.SearchPage.SearchFragment
 import com.example.ringleaderfront.databinding.ActivityMainBinding
 import com.example.ringleaderfront.databinding.MyToolbarBinding
 
@@ -53,6 +57,7 @@ class MainActivity : AppCompatActivity() {
 
     fun transactionMainPageFragment() {
         val name="main_activity_apply_bundle"
+
         val fragment: MainPageFragment = MainPageFragment.newInstance(name)
         val header = getLayoutInflater().inflate(R.layout.activity_main, null, false)
         supportFragmentManager.beginTransaction().replace(
@@ -175,6 +180,9 @@ class MainActivity : AppCompatActivity() {
         getmyIntent()
         //getWriteIntent()
     }
+
+
+
 
 //    private fun getWriteIntent() {
 //        Log.d("getWriteIntent함수","진입")

@@ -56,6 +56,7 @@
                     android:gravity="center">
 
                     <LinearLayout
+                        android:id="@+id/activity_reviewinfo_iv_ll"
                         android:layout_width="wrap_content"
                         android:layout_height="match_parent"
                         android:orientation="horizontal">
@@ -142,6 +143,7 @@
                             android:textStyle="bold" />
 
                         <LinearLayout
+                            android:id="@+id/activity_reviewinfo_tags_ll"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
@@ -534,18 +536,4 @@ tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
         </ScrollView>
 
     </LinearLayout>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/main_bnv"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:itemIconSize="20dp"
-        app:itemIconTint="@drawable/btm_color_selector"
-        app:itemTextColor="@drawable/btm_color_selector"
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>
