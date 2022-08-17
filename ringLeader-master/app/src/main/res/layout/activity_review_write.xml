@@ -37,32 +37,28 @@
 
         </RelativeLayout>
 
-        <ScrollView
+        <View
             android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:fillViewport="true"
-            android:orientation="vertical">
+            android:layout_height="1dp"
+            android:background="@color/gray" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical"
-                app:layout_constraintBottom_toBottomOf="parent">
-                <View
-                    android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="@color/gray"/>
+                app:layout_constraintBottom_toBottomOf="parent"
+                android:weightSum="14">
                 <HorizontalScrollView
                     android:id="@+id/review_photo"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
+                    android:layout_height="1dp"
+                    android:layout_weight="4"
                     android:fillViewport="true"
                     android:gravity="center">
-
                     <LinearLayout
                         android:id="@+id/review_write_ll"
                         android:layout_width="match_parent"
-                        android:layout_height="150dp"
+                        android:layout_height="match_parent"
                         android:orientation="horizontal">
                             <ImageButton
                                 android:id="@+id/review_write_ll_ib"
@@ -99,15 +95,15 @@
                 </HorizontalScrollView>
                 <View
                     android:layout_width="match_parent"
-                    android:layout_height="2dp"
-                    android:background="@color/gray"/>
+                    android:layout_height="1dp"
+                    android:background="@color/gray" />
 
                 <EditText
                     android:id="@+id/title_EditText"
                     android:layout_width="match_parent"
-                    android:layout_height="50dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:layout_marginHorizontal="30dp"
-                    android:layout_marginVertical="10dp"
                     android:background="@null"
                     android:hint="제목을 입력해 주세요"
                     android:inputType="textShortMessage"
@@ -118,7 +114,8 @@
                 <EditText
                     android:id="@+id/tag_EditText"
                     android:layout_width="match_parent"
-                    android:layout_height="40dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
                     android:background="@color/gray"
                     android:hint="#태그를_3개_입력해_주세요 (띄어쓰기로 구분)"
                     android:inputType="textShortMessage"
@@ -132,26 +129,22 @@
                 <EditText
                     android:id="@+id/review_EditText"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content"
-                    android:layout_marginTop="10dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="7"
                     android:background="@null"
                     android:gravity="top"
                     android:hint="내용을 입력해 주세요"
                     android:inputType="textMultiLine"
-
-
-                    android:minHeight="500dp"
                     android:paddingHorizontal="30dp"
                     android:textSize="9pt"
-
                     app:layout_constraintTop_toBottomOf="@id/tag_EditText"
-
-
                     />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
-                    android:layout_height="80dp"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:gravity="center"
                     android:background="@color/gray">
 
                     <TextView
@@ -159,19 +152,14 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_alignParentStart="true"
-
-                        android:layout_centerVertical="true"
-
                         android:layout_marginStart="20dp"
                         android:hint="(0/10,000)" />
 
 
                     <androidx.appcompat.widget.AppCompatButton
                         android:id="@+id/write_btn"
-
                         android:layout_width="wrap_content"
-
-                        android:layout_height="40dp"
+                        android:layout_height="30dp"
                         android:layout_alignParentEnd="true"
                         android:layout_marginEnd="18dp"
                         android:background="@drawable/button_back"
@@ -184,7 +172,6 @@
 
 
             </LinearLayout>
-        </ScrollView>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
