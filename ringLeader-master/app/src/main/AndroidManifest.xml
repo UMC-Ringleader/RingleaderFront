@@ -33,7 +33,9 @@
         <activity
             android:name=".WriteReview.ReviewWriteCheckActivity"
             android:exported="false" />
-
+        <activity
+            android:name=".ReviewReportActivity"
+            android:exported="false" />
         <activity
             android:name=".UsernameActivity"
             android:exported="false" />

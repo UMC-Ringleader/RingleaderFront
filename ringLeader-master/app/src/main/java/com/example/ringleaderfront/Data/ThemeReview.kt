@@ -6,7 +6,8 @@ import java.io.Serializable
 data class ThemeReview(
     var storeName:String,
     var catagory:String,
-    var user: User?,
+    var user: String?,
+    var date: String?,
     var title:String,
     var tags:ArrayList<tag>?,
     var images:ArrayList<Uri>,

@@ -5,10 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".WriteReview.ReviewWriteCheckActivity">
+
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
+
         <RelativeLayout
             android:layout_width="match_parent"
             android:layout_height="60dp"
@@ -42,10 +44,11 @@
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:orientation="vertical">
+
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
-                    android:background="@color/gray"/>
+                    android:background="@color/gray" />
 
 
                 <HorizontalScrollView
@@ -97,8 +100,8 @@
                     android:orientation="horizontal">
 
                     <com.google.android.material.button.MaterialButton
-                        style="@style/Widget.AppCompat.Button.Borderless"
                         android:id="@+id/review_category_button"
+                        style="@style/Widget.AppCompat.Button.Borderless"
                         android:layout_width="wrap_content"
                         android:layout_height="33dp"
                         android:layout_gravity="center_horizontal"
@@ -209,7 +212,6 @@
                         android:id="@+id/review_profileImg"
                         android:layout_width="50dp"
                         android:layout_height="50dp"
-                        android:background="@drawable/circle_background"
                         android:scaleType="centerCrop"
                         android:src="@drawable/profile_sample" />
 
@@ -238,7 +240,7 @@
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginTop="10dp"
-                    android:background="@color/gray"/>
+                    android:background="@color/gray" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
@@ -351,8 +353,9 @@ tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
 
 
                 <com.google.android.material.button.MaterialButton
-                    android:layout_width="wrap_content"
+                    android:id="@+id/review_report_btn"
                     style="@style/Widget.AppCompat.Button.Borderless"
+                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="end"
                     android:layout_marginHorizontal="30dp"
@@ -363,9 +366,9 @@ tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
                     android:textColor="@color/dark_gray"
                     android:textSize="6pt"
                     app:backgroundTint="@color/white"
-                    app:icon="@drawable/ic_baseline_add_24"
+                    app:icon="@drawable/ic_report"
                     app:iconGravity="start"
-                    app:iconPadding="0dp"
+                    app:iconPadding="10dp"
                     app:iconSize="20dp"
                     app:iconTint="@color/dark_gray" />
 
@@ -373,14 +376,14 @@ tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
                     android:layout_width="match_parent"
                     android:layout_height="2dp"
                     android:layout_marginTop="10dp"
-                    android:background="@color/gray"/>
+                    android:background="@color/gray" />
 
                 <LinearLayout
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:orientation="horizontal"
                     android:layout_marginVertical="30dp"
-                    android:gravity="center">
+                    android:gravity="center"
+                    android:orientation="horizontal">
 
                     <LinearLayout
                         android:layout_width="90dp"
@@ -394,9 +397,9 @@ tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@drawable/round_button"
-                            android:minHeight="0dp"
-                            android:minWidth="0dp"
                             android:gravity="center"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
                             android:shadowColor="@color/main_color"
                             android:text="좋아요"
                             android:textColor="@color/main_color"
@@ -417,6 +420,7 @@ tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
                             android:textSize="9pt"
                             android:textStyle="bold" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="90dp"
                         android:layout_height="wrap_content"
@@ -429,9 +433,9 @@ tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@drawable/round_button"
-                            android:minHeight="0dp"
-                            android:minWidth="0dp"
                             android:gravity="center"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
                             android:shadowColor="@color/main_color"
                             android:text="정확해요"
                             android:textColor="@color/main_color"
@@ -452,6 +456,7 @@ tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
                             android:textSize="9pt"
                             android:textStyle="bold" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="90dp"
                         android:layout_height="wrap_content"
@@ -464,9 +469,9 @@ tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@drawable/round_button"
-                            android:minHeight="0dp"
-                            android:minWidth="0dp"
                             android:gravity="center"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
                             android:shadowColor="@color/main_color"
                             android:text="공감돼요"
                             android:textColor="@color/main_color"
@@ -487,6 +492,7 @@ tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
                             android:textSize="9pt"
                             android:textStyle="bold" />
                     </LinearLayout>
+
                     <LinearLayout
                         android:layout_width="90dp"
                         android:layout_height="wrap_content"
@@ -499,9 +505,9 @@ tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
                             android:layout_height="wrap_content"
                             android:layout_gravity="center"
                             android:background="@drawable/round_button"
-                            android:minHeight="0dp"
-                            android:minWidth="0dp"
                             android:gravity="center"
+                            android:minWidth="0dp"
+                            android:minHeight="0dp"
                             android:shadowColor="@color/main_color"
                             android:text="도움돼요"
                             android:textColor="@color/main_color"
@@ -529,25 +535,11 @@ tapas bar 가는 법은 이태원역 1번 출구로 나가셔서
                 <View
                     android:layout_width="match_parent"
                     android:layout_height="100dp"
-                    android:background="@color/gray"/>
+                    android:background="@color/gray" />
             </LinearLayout>
 
 
         </ScrollView>
 
     </LinearLayout>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/main_bnv"
-        android:layout_width="match_parent"
-        android:layout_height="60dp"
-        app:itemIconSize="20dp"
-        app:itemIconTint="@drawable/btm_color_selector"
-        app:itemTextColor="@drawable/btm_color_selector"
-        app:labelVisibilityMode="labeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_nav_menu" />
-
 </androidx.constraintlayout.widget.ConstraintLayout>

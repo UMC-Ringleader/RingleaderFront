@@ -3,6 +3,7 @@ package com.example.ringleaderfront.WriteReview
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ringleaderfront.Data.PostReviewRes
@@ -15,6 +16,7 @@ import com.example.ringleaderfront.Service.getRetrofit
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response
+
 
 class ReviewWriteCheckActivity : AppCompatActivity() {
 
@@ -68,10 +70,12 @@ class ReviewWriteCheckActivity : AppCompatActivity() {
             ThemeReview( query.toString(),
                 "catagory5",
                 null,
+                todayDate,
                 titleText.toString(),
                 tags1,
                 images1,
                 reviewText.toString())
+
 
 
         binding.reviewSelectSearchArrowIv.setOnClickListener{

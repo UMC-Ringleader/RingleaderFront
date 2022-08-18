@@ -5,6 +5,8 @@ import android.content.Context
 import android.os.Bundle
 import android.os.Handler
 import android.util.Log
+import android.view.ContextThemeWrapper
+import android.widget.Button
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
 import com.example.ringleaderfront.Data.Town
@@ -179,6 +181,9 @@ class MainActivity : AppCompatActivity() {
         getmyIntent()
         //getWriteIntent()
     }
+
+
+
 
 //    private fun getWriteIntent() {
 //        Log.d("getWriteIntent함수","진입")

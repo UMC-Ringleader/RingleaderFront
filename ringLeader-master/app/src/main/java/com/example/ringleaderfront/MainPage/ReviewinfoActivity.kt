@@ -1,15 +1,24 @@
 package com.example.ringleaderfront.MainPage
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
+
 import com.example.ringleaderfront.Data.ThemeReview
+
+import android.widget.Toast
 import com.example.ringleaderfront.databinding.ActivityReviewinfoBinding
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.content.ContextCompat
 import com.bumptech.glide.Glide
+import com.example.ringleaderfront.R
+import com.example.ringleaderfront.ReviewReportActivity
+import com.example.ringleaderfront.WriteReview.ReviewWriteCheckActivity
 
 import java.io.Serializable
+import java.time.LocalDate
 
 class ReviewinfoActivity : AppCompatActivity(), Serializable {
 
@@ -25,21 +34,28 @@ class ReviewinfoActivity : AppCompatActivity(), Serializable {
         binding.reviewText.text = reviewIntent.review_text
 
         //리뷰제목
-        binding.titleText.text=reviewIntent.title
+        binding.titleText.text = reviewIntent.title
+
+
+        //날짜
+        binding.todayDate.text = reviewIntent.date
 
         //태그
         binding.activityReviewinfoTagsLl.removeAllViews()
 
-        reviewIntent.tags?.let{
-            for(tag in it){
-                val layoutParams=LinearLayout.LayoutParams(  LinearLayout.LayoutParams.WRAP_CONTENT,
-                    LinearLayout.LayoutParams.WRAP_CONTENT)
+        reviewIntent.tags?.let {
+            for (tag in it) {
+                val layoutParams = LinearLayout.LayoutParams(
+                    LinearLayout.LayoutParams.WRAP_CONTENT,
+                    LinearLayout.LayoutParams.WRAP_CONTENT
+                )
                 val tagTextView = TextView(this@ReviewinfoActivity)
-                tagTextView.text=tag.tagText
+                tagTextView.text = tag.tagText
                 binding.activityReviewinfoTagsLl.addView(tagTextView)
+                tagTextView.setTextColor(ContextCompat.getColor(this, R.color.main_color))
+
             }
         }
-
 
 
         //이미지
@@ -56,6 +72,11 @@ class ReviewinfoActivity : AppCompatActivity(), Serializable {
                 binding.activityReviewinfoIvLl.addView(showImage)
             }
 
+        }
+
+        binding.reviewReportBtn.setOnClickListener {
+            val writeToReportActivity = Intent(this, ReviewReportActivity::class.java)
+            startActivity(writeToReportActivity)
         }
     }
 

@@ -1,4 +1,9 @@
 package com.example.ringleaderfront.MainPage
+
+import android.annotation.SuppressLint
+import android.app.Activity
+import android.content.Context
+
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
@@ -8,6 +13,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
+import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import com.example.ringleaderfront.R
 import com.example.ringleaderfront.Data.ThemeReview
@@ -46,6 +52,9 @@ class MainPageFragment : Fragment() ,Serializable{
         }
 
     }
+
+
+    @SuppressLint("ResourceAsColor")
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -85,12 +94,12 @@ class MainPageFragment : Fragment() ,Serializable{
 
         var review1= ThemeReview("타파스바",
             "음식점",
-            null,
+            "Royce",
+            "2022-08-15",
             "스페인 요리의 정석과도 같은 곳",
             tags_arr,
             images_arr,
-            "지나갈 때마다 가 보고 싶었던... \n" +
-                    "이태원 스페인요리 전문점 타파스바! \n"
+            "지나갈 때마다 가 보고 싶었던... 이태원 스페인요리 전문점 타파스바! 너무너무 기대하면서 갔습니다 ㅎㅎ 그 맛은.. 정말 글로 설명하기 어려워요 진짜 우와"
         )
 
 
@@ -108,6 +117,7 @@ class MainPageFragment : Fragment() ,Serializable{
         var review2= ThemeReview("어제의 카레",
             "음식점",
             null,
+            "2022-08-15",
             "카레만 맛있어도 될텐데",
             tags2_arr,
             images2_arr,
@@ -130,6 +140,7 @@ class MainPageFragment : Fragment() ,Serializable{
         var review3= ThemeReview("야키토리 고우",
             "주점",
             null,
+            "2022-08-15",
             "이게 바로 술이 술술 들어가는 분위기?!",
             tags3_arr,
             images3_arr,
@@ -186,6 +197,7 @@ class MainPageFragment : Fragment() ,Serializable{
                 reviewView1.review_card_store_name_tv.setText(review_i?.storeName.toString())
                 reviewView1.review_card_category_tv.setText(review_i?.catagory)
                 reviewView1.review_card_review_title_tv.setText(review_i?.title)
+                reviewView1.review_card_user.setText(review_i?.user)
 
 
                 reviewView1.review_card_tags_ll.removeAllViews()
@@ -197,6 +209,7 @@ class MainPageFragment : Fragment() ,Serializable{
 
                         val tagTextView = TextView(context)
                         tagTextView.text=tag.tagText
+                        tagTextView.setTextColor(ContextCompat.getColor(requireContext() , R.color.main_color))
                         reviewView1.review_card_tags_ll.addView(tagTextView)
                     }
                 }
