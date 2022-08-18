@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".gallary.ReviewSelectGallaryActivity">
+    tools:context=".Gallary.ReviewSelectGallaryActivity">
 
 <!--    <ImageButton-->
 <!--        android:id="@+id/review_select_gallary_arrow_iv"-->

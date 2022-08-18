@@ -1,4 +1,4 @@
-package com.example.ringleaderfront
+package com.example.ringleaderfront.Data
 
 import java.io.Serializable
 

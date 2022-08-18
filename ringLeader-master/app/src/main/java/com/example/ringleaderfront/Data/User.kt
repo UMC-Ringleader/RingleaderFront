@@ -1,6 +1,7 @@
-package com.example.ringleaderfront
+package com.example.ringleaderfront.Data
 
 import android.net.Uri
+import com.example.ringleaderfront.Data.ThemeReview
 
 
 data class User(var userName:String,

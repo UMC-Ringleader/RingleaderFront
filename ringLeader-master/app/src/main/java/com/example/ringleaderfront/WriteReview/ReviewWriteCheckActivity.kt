@@ -3,14 +3,18 @@ package com.example.ringleaderfront.WriteReview
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
-import android.widget.Toast
+import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.ringleaderfront.MainActivity
-import com.example.ringleaderfront.ThemeReview
-import com.example.ringleaderfront.User
+import com.example.ringleaderfront.Data.PostReviewRes
+import com.example.ringleaderfront.Data.ThemeReview
 import com.example.ringleaderfront.databinding.ActivitReviewWriteCheckBinding
-import com.example.ringleaderfront.tag
-import java.time.LocalDate
+import com.example.ringleaderfront.Data.tag
+import com.example.ringleaderfront.Service.AuthRetrofitInterface
+import com.example.ringleaderfront.Service.PostUserRes
+import com.example.ringleaderfront.Service.getRetrofit
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 
 class ReviewWriteCheckActivity : AppCompatActivity() {
 
@@ -70,17 +74,56 @@ class ReviewWriteCheckActivity : AppCompatActivity() {
                 reviewText.toString())
 
 
-//        binding.postBtn.setOnClickListener {
-//            Toast.makeText(this, "작성 완료", Toast.LENGTH_SHORT).show()
-//
-//            val postCheck = Intent(this, ReviewinfoActivity::class.java)
-//            postCheck.putExtra("review_content", themeReview4)
-//            startActivity(postCheck)
-//        }
-//
         binding.reviewSelectSearchArrowIv.setOnClickListener{
             val backIntent = Intent(this, ReviewWriteActivity::class.java)
             startActivity(backIntent)
         }
+
+        //확인 누르면 post 하는 버튼
+        binding.postBtn.setOnClickListener {
+            reviewCheck()
+        }
+    }
+
+    private fun reviewCheck() {
+        val authService= getRetrofit().create(AuthRetrofitInterface::class.java)
+        authService.reviewCheck(getPostReviewRes()).enqueue(object : Callback<PostUserRes>{
+            override fun onResponse(call: Call<PostUserRes>, response: Response<PostUserRes>) {
+                Log.d("REVIEWCHECK/SUCCESS",response.toString())
+                val resp:PostUserRes=response.body()!!
+                when(resp.code){
+                    1000->finish()
+                    else->{
+
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<PostUserRes>, t: Throwable) {
+                Log.d("REVIEWCHECK/FAILURE",t.message.toString())
+            }
+
+        })
+        Log.d("REVIEWCHECK","HELLO")
+    }
+
+    private fun getPostReviewRes(): PostReviewRes {
+        var userId =10
+        var title ="Test Title 1"
+        var category ="카페"
+//        var hashtag1 = "치즈케이크"
+//        var hashtag2 ="24시"
+//        var hashtag3 = ""
+
+        var hashtags=ArrayList<String>()
+        hashtags.add("카페")
+        hashtags.add("치즈케이크")
+        hashtags.add("24시")
+
+
+        var contents = "치즈케이크가 맛있는 24시간 카페"
+        var regionId=  15
+
+        return PostReviewRes(userId,title,category,hashtags,contents,regionId)
     }
 }

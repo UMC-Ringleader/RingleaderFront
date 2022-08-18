@@ -19,9 +19,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 import com.esafirm.imagepicker.features.*
 import com.example.ringleaderfront.R
-import com.example.ringleaderfront.databinding.ActivityReviewSelectSearchBinding
 import com.example.ringleaderfront.databinding.ActivityReviewWriteBinding
-import com.example.ringleaderfront.tag
 import java.time.LocalDate
 
 

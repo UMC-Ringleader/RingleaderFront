@@ -1,11 +1,9 @@
-package com.example.ringleaderfront
+package com.example.ringleaderfront.Data
 
 import android.net.Uri
-import android.os.Parcelable
 import java.io.Serializable
 
 data class ThemeReview(
-
     var storeName:String,
     var catagory:String,
     var user: User?,
@@ -13,6 +11,4 @@ data class ThemeReview(
     var tags:ArrayList<tag>?,
     var images:ArrayList<Uri>,
     var review_text:String
-
-
 ): Serializable

@@ -8,9 +8,8 @@ import android.widget.AdapterView
 import android.widget.ArrayAdapter
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
-import com.example.ringleaderfront.databinding.ActivityMainBinding
+import com.example.ringleaderfront.Data.Town
 import com.example.ringleaderfront.databinding.ActivityTownBinding
-import kotlinx.android.synthetic.main.activity_town.*
 
 class TownActivity: AppCompatActivity() {
     lateinit var towns:ArrayList<Town>
@@ -32,8 +31,8 @@ class TownActivity: AppCompatActivity() {
 
     private fun DummyTown() {
         towns = ArrayList<Town>()
-        val town1=Town("경리단길",null)
-        val town2=Town("가로수길",null)
+        val town1= Town("경리단길",null)
+        val town2= Town("가로수길",null)
         towns.add(town1)
         towns.add(town2)
 
@@ -52,7 +51,9 @@ class TownActivity: AppCompatActivity() {
                 if(position!=0) {
 
                     val myIntent: Intent = Intent(this@TownActivity, MainActivity::class.java)
-                        .apply { this.putExtra("town_name", towns.get(position-1)) }
+                        .apply { this.putExtra("town_name", towns.get(position-1))
+
+                        }
                     startActivity(myIntent)
                 }
             }

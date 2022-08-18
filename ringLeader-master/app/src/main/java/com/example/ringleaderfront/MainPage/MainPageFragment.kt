@@ -1,7 +1,5 @@
 package com.example.ringleaderfront.MainPage
-import android.content.Context
 import android.content.Intent
-import android.graphics.drawable.GradientDrawable
 import android.net.Uri
 import android.os.Bundle
 import android.util.Log
@@ -12,12 +10,19 @@ import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.fragment.app.Fragment
 import com.example.ringleaderfront.R
-import com.example.ringleaderfront.ThemeReview
-import com.example.ringleaderfront.Town
+import com.example.ringleaderfront.Data.ThemeReview
+import com.example.ringleaderfront.Data.Town
 import com.example.ringleaderfront.WriteReview.ReviewSelectSearchActivity
 import com.example.ringleaderfront.databinding.FragmentMainPageBinding
-import com.example.ringleaderfront.tag
+import com.example.ringleaderfront.Data.tag
+import com.example.ringleaderfront.Service.AuthRetrofitInterface
+import com.example.ringleaderfront.Service.LookReviewRes
+import com.example.ringleaderfront.Service.PostUserRes
+import com.example.ringleaderfront.Service.getRetrofit
 import kotlinx.android.synthetic.main.review_card.view.*
+import retrofit2.Call
+import retrofit2.Callback
+import retrofit2.Response
 import java.io.Serializable
 
 class MainPageFragment : Fragment() ,Serializable{
@@ -39,22 +44,7 @@ class MainPageFragment : Fragment() ,Serializable{
             fragment.arguments = bundle
             return fragment
         }
-//        fun newInstance(name: String) = MainPageFragment().apply {
-//            arguments = Bundle().apply {
-//                putString(ARG_NAME, name)
-//                Log.d("newInstance_bundle_name",name)
-//
-//            }
-//            Log.d("order_newInstance_finish","finish")
-//        }
 
-//        fun newInstance(name: String) = this.apply {
-//            val args = Bundle()
-//            args.putString(ARG_NAME, name)
-//            this.arguments = args
-//            Log.d("this.arguments",this.arguments.toString())
-//            return this
-//        }
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -62,45 +52,7 @@ class MainPageFragment : Fragment() ,Serializable{
     ): View? {
         val binding=FragmentMainPageBinding.inflate(inflater,container,false)
         Log.d("order_OnCreateView","OnCreateView실행")
-//        arguments?.let{
-//            val name=it.getString(ARG_NAME)
-//            Log.d("apply_bundle?",name.toString())
-//        }
-        //val name=arguments?.getString(ARG_NAME)
-        //Log.d("ApplyBundle?",name.toString())
-
-        //retrofit
-//        lifecycleScope.launchWhenCreated {
-//            val response=try{
-//                RetrofitClass.reviewApi.getReviews(100)
-//            }catch(e:IOException){
-//                Log.e(TAG,"IOException,you might not have internet connection")
-//                return@launchWhenCreated
-//            }catch(e:HttpException){
-//                Log.e(TAG,"HTTPException,unexpected response")
-//                return@launchWhenCreated
-//            }
-//            if(response.isSuccessful&& response.body()!=null){
-//
-//                themeReviews=response.body()!!
-//            }else{
-//
-//                Log.e(TAG,"Response not successful")
-//            }
-//        }
-
-        //WriteActivity에서 bundle로 넘겨준 리뷰객체 받기
-
-//        var bundle = this.arguments
-//        Log.d("bundle상태",bundle.toString())
-//        if (bundle != null) {
-//            val bundleDefault=requireArguments().getString("bundleD")
-//            Log.d("bundleIsNotNull",bundleDefault.toString())
-//            //val writeReview=requireArguments()!!.getSerializable("writeReview")
-//            //Log.d("bundle_in_fragment",writeReview.toString())
-//        }
-
-
+        lookReviews()
 
         //Dummytown
         var dummyTown1= Town("이태원", ArrayList())
@@ -318,5 +270,37 @@ class MainPageFragment : Fragment() ,Serializable{
         }
 
         return binding.root
+    }
+
+    private fun lookReviews() {
+        Log.d("LOOKREVIEWS-RESPONSE","lookReviews() 진입")
+        val lookReviewsService = getRetrofit().create(AuthRetrofitInterface::class.java)
+
+        lookReviewsService.lookReviews(15).enqueue(object : Callback<LookReviewRes> {
+            override fun onResponse(call: Call<LookReviewRes>, response: Response<LookReviewRes>) {
+                Log.d("LOOKREVIEWS-RESPONSE/SUCCESS",response.toString())
+                if (response.isSuccessful && response.code() == 200) {
+                    val lookReviewsResponse: LookReviewRes = response.body()!!
+
+                    when (val code = lookReviewsResponse.code) {
+                        1000 -> {
+                            //lookView.onGetSongSuccess(code, songResponse.result!!)
+//
+                            Log.d("LOOKREVIEWS-RESPONSE/SUCCESS/DATA",lookReviewsResponse.result?.get(0)?.category.toString())
+                        }
+
+                        else ->{
+                            //lookView.onGetSongFailure(code, songResponse.message)
+                        }
+                    }
+                }
+            }
+
+            override fun onFailure(call: Call<LookReviewRes>, t: Throwable) {
+                //lookView.onGetSongFailure(400, "네트워크 오류가 발생했습니다.")
+                Log.d("SONG-RESPONSE/FAILURE",t.message.toString())
+            }
+        })
+
     }
 }

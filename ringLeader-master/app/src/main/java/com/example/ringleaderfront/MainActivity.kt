@@ -7,6 +7,7 @@ import android.os.Handler
 import android.util.Log
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
+import com.example.ringleaderfront.Data.Town
 import com.example.ringleaderfront.MainPage.MainPageFragment
 import com.example.ringleaderfront.SearchPage.SearchFragment
 import com.example.ringleaderfront.databinding.ActivityMainBinding
@@ -108,7 +109,7 @@ class MainActivity : AppCompatActivity() {
 
 
     private fun getmyIntent() {
-        var townIntent:Town?=null
+        var townIntent: Town?=null
         townIntent = intent.getSerializableExtra("town_name") as Town?
         Log.d("townIntent",townIntent?.name+"MainActivity에 전달 완료")
         //sendToFragment(townIntent)
@@ -128,7 +129,7 @@ class MainActivity : AppCompatActivity() {
 
     }
 
-    private fun sendToFragment(townIntent:Town) {
+    private fun sendToFragment(townIntent: Town) {
         //지금 작동이 안됨.
         val MainPageFragment1 = MainPageFragment()
         val bundle = Bundle()

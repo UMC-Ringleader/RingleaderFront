@@ -4,14 +4,11 @@ import android.os.Bundle
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.example.ringleaderfront.ThemeReview
+import com.example.ringleaderfront.Data.ThemeReview
 import com.example.ringleaderfront.databinding.ActivityReviewinfoBinding
 import androidx.appcompat.app.AppCompatActivity
 import com.bumptech.glide.Glide
 
-import com.example.ringleaderfront.databinding.ActivityMainBinding
-import com.example.ringleaderfront.tag
-import kotlinx.android.synthetic.main.review_card.view.*
 import java.io.Serializable
 
 class ReviewinfoActivity : AppCompatActivity(), Serializable {

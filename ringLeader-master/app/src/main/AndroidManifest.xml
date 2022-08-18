@@ -8,6 +8,7 @@
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
 
     <application
+
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -17,12 +18,14 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.RingLeaderFront"
         tools:remove="android:appComponentFactory"
-        tools:targetApi="p">
+        tools:targetApi="p"
+        android:usesCleartextTraffic="true"
+        >
         <activity
             android:name=".WriteReview.ReviewWriteActivity"
             android:exported="false" />
         <activity
-            android:name=".gallary.ReviewSelectGallaryActivity"
+            android:name=".Gallary.ReviewSelectGallaryActivity"
             android:exported="false" />
         <activity
             android:name=".WriteReview.ReviewSelectSearchActivity"

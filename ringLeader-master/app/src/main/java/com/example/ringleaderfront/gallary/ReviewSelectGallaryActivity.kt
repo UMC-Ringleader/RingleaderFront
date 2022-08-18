@@ -1,33 +1,15 @@
-package com.example.ringleaderfront.gallary
+package com.example.ringleaderfront.Gallary
 
-import android.Manifest
-import android.content.ContentValues.TAG
 import android.content.Intent
-import android.content.pm.PackageManager
-import android.graphics.Bitmap
 import android.graphics.Color
 import android.net.Uri
-import android.os.Build
 import android.os.Bundle
-import android.service.controls.ControlsProviderService.TAG
 import android.util.Log
-import android.view.View
-import android.widget.*
-import android.widget.AdapterView.OnItemClickListener
-import androidx.annotation.NonNull
 import androidx.appcompat.app.AppCompatActivity
-import androidx.constraintlayout.helper.widget.MotionEffect.TAG
-import androidx.constraintlayout.widget.ConstraintLayoutStates.TAG
-import androidx.constraintlayout.widget.Constraints.TAG
-import androidx.constraintlayout.widget.StateSet.TAG
 import com.bumptech.glide.Glide
 import com.esafirm.imagepicker.features.*
-import com.example.ringleaderfront.R
-import com.example.ringleaderfront.TownActivity
 import com.example.ringleaderfront.WriteReview.ReviewWriteActivity
 import com.example.ringleaderfront.databinding.ActivityReviewSelectGallaryBinding
-import com.example.ringleaderfront.databinding.ActivityReviewSelectSearchBinding
-import kotlinx.android.synthetic.main.activity_review_select_gallary.*
 
 
 class ReviewSelectGallaryActivity : AppCompatActivity() {
