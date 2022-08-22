@@ -40,7 +40,7 @@ class LookReviewService {
 
             override fun onFailure(call: Call<LookReviewRes>, t: Throwable) {
                 //lookView.onGetSongFailure(400, "네트워크 오류가 발생했습니다.")
-                Log.d("SONG-RESPONSE/FAILURE",t.message.toString())
+                Log.d("LOOKREVIEWS-RESPONSE/FAILURE",t.message.toString())
             }
         })
     }

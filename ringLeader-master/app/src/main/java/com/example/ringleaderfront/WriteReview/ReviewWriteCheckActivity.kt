@@ -6,7 +6,7 @@ import android.os.Bundle
 
 import android.util.Log
 import androidx.appcompat.app.AppCompatActivity
-import com.example.ringleaderfront.Data.PostReviewRes
+import com.example.ringleaderfront.Service.PostReviewRes
 import com.example.ringleaderfront.Data.ThemeReview
 import com.example.ringleaderfront.databinding.ActivitReviewWriteCheckBinding
 import com.example.ringleaderfront.Data.tag

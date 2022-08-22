@@ -1,14 +1,17 @@
 package com.example.ringleaderfront.WriteReview
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
-
+import android.view.View
+import android.widget.AdapterView
+import android.widget.AdapterView.OnItemClickListener
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.appcompat.widget.SearchView
 import com.example.ringleaderfront.Store
 import com.example.ringleaderfront.databinding.ActivityReviewSelectSearchBinding
+
 
 class ReviewSelectSearchActivity : AppCompatActivity() {
     lateinit var binding: ActivityReviewSelectSearchBinding
@@ -28,7 +31,7 @@ class ReviewSelectSearchActivity : AppCompatActivity() {
 
         setUpData()
         setUpList()
-        //setUpOnClickListener()
+        setUpOnClickListener()
 
 
         // initializing list adapter and setting layout
@@ -98,14 +101,23 @@ class ReviewSelectSearchActivity : AppCompatActivity() {
     }
 
     private fun setUpOnClickListener() {
-//        listView.setOnItemClickListener(new AdapterView.OnItemClickListener()){
-//
-//            public void onItemClick(AdapterView<?> adapterView, View view,int position,long l){
-//                Animal selectAnimal=(Animal)listView.getItemAtPosition(position);
-//                Intent showDetail=new Intent(getApplicationContext(),DetailActivity.class);
-//                showDetail.putExtra("id",selectAnimal.getId())
-//            }
-//        }
+
+
+        binding.reviewSelectSearchLv.setOnItemClickListener(OnItemClickListener { a_parent, a_view, a_position, a_id ->
+            val item= listAdapter.getItem(a_position) as Store
+            Toast.makeText(
+                this@ReviewSelectSearchActivity,
+                item.storeName + " Click event",
+                Toast.LENGTH_SHORT
+            ).show()
+
+            val intent = Intent(
+                this@ReviewSelectSearchActivity,
+                ReviewWriteActivity::class.java
+            )
+            intent.putExtra("query", item.storeName )
+            startActivity(intent)
+        })
 
     }
 

@@ -247,14 +247,14 @@ class MainPageFragment : Fragment() ,Serializable,LookView{
 //
 //
 //
-////floating button 글 작성 버튼
-//        binding.extendedFab.setOnClickListener {
-////            val intent = Intent(getActivity(), WriteActivity::class.java)
-////            startActivity(intent)
-//            val intent = Intent(getActivity(), ReviewSelectSearchActivity::class.java)
+//floating button 글 작성 버튼
+        binding.extendedFab.setOnClickListener {
+//            val intent = Intent(getActivity(), WriteActivity::class.java)
 //            startActivity(intent)
-//
-//        }
+            val intent = Intent(getActivity(), ReviewSelectSearchActivity::class.java)
+            startActivity(intent)
+
+        }
 //
 //
 //
@@ -273,6 +273,7 @@ class MainPageFragment : Fragment() ,Serializable,LookView{
     }
 
     private fun getReviews() {
+        Log.d("serverData","getReviews()")
 
         val LookReviewService = LookReviewService()
         LookReviewService.setLookView(this)
@@ -283,28 +284,37 @@ class MainPageFragment : Fragment() ,Serializable,LookView{
 
     override fun onGetReviewSuccess(code: Int, result: List<LookReview>) {
         var list1= mutableListOf<ServerLookReview>()
+        Log.d("serverData","OnGetReviewSuccess()")
 
         //region에 있는 리뷰들 ServerLookReview 객체로 region의 list1에 추가
         for(i in 0..(result?.size-1)) {
-            val userName1 = result?.get(i).userName
+            val userId1=result?.get(i).userId
+            val nickName1 = result?.get(i).nickName
             val userContribution1 = result?.get(i).userContribution
             val title1 = result?.get(i).title
+            val reviewTitle1=result?.get(i).reviewTitle
             val category1 = result?.get(i).category
             val hashtag11 = result?.get(i).hashtag1
             val hashtag21 = result?.get(i).hashtag2
             val hashtag31 = result?.get(i).hashtag3
             val contents1 = result?.get(i).contents
             val imgUrls1 = result?.get(i).imgUrls
+            val reviewFeedBacks1=result?.get(i).reviewFeedBacks
+            val bookmarked1=result?.get(i).bookmarked
             var ServerLookReview1 = ServerLookReview(
-                userName1,
+                userId1,
+                nickName1,
                 userContribution1,
                 title1,
+                reviewTitle1,
                 category1,
                 hashtag11,
                 hashtag21,
                 hashtag31,
                 contents1,
-                imgUrls1
+                imgUrls1,
+                reviewFeedBacks1,
+                bookmarked1
             )
             list1.add(ServerLookReview1)
         }
@@ -319,7 +329,7 @@ class MainPageFragment : Fragment() ,Serializable,LookView{
                 val reviewView1=getLayoutInflater().inflate(R.layout.review_card,null)
 
                 //card에 margin부여
-                val cardLayoutParams=LinearLayout.LayoutParams(  LinearLayout.LayoutParams.WRAP_CONTENT,
+                val cardLayoutParams=LinearLayout.LayoutParams(  LinearLayout.LayoutParams.MATCH_PARENT,
                     LinearLayout.LayoutParams.WRAP_CONTENT)
                 cardLayoutParams.setMargins(30,35,30,35)
                 reviewView1.layoutParams=cardLayoutParams
@@ -347,8 +357,8 @@ class MainPageFragment : Fragment() ,Serializable,LookView{
 
                 reviewView1.review_card_store_name_tv.setText(review_i?.title)
                 reviewView1.review_card_category_tv.setText(review_i?.category)
-               // reviewView1.review_card_review_title_tv.setText(review_i?.title)
-                reviewView1.review_card_user.setText(review_i?.userName)
+                reviewView1.review_card_review_title_tv.setText(review_i?.reviewTitle)
+                reviewView1.review_card_user.setText(review_i?.nickName)
 
 
 

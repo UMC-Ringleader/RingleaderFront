@@ -1,4 +1,4 @@
-package com.example.ringleaderfront.Data
+package com.example.ringleaderfront.Service
 
 import com.google.gson.annotations.SerializedName
 import java.io.Serializable
