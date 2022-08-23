@@ -80,8 +80,7 @@ class ReviewSelectSearchActivity : AppCompatActivity() {
                             this@ReviewSelectSearchActivity,
                             "No store found..",
                             Toast.LENGTH_LONG
-                        )
-                            .show()
+                        ).show()
 
                     }
                     return false
@@ -131,14 +130,30 @@ class ReviewSelectSearchActivity : AppCompatActivity() {
     private fun setUpData() {
         // initializing list and adding data to list
         storeList = ArrayList<Store>()
+//        var store1 = Store("치즈플로", null)
+//        var store2 = Store("샐러드셀러", null)
+//        var store3 = Store("브라이퍼플릭", null)
+//        var store4 = Store("타파스바", null)
+//        var store5 = Store("쥬에", null)
+//        var store6 = Store("아티장베이커스", null)
+//        var store7 = Store("Cozyvilla Coffee Roasters", null)
+//        var store8 = Store("까를로스 바", null)
+//        var store9 = Store("한남작업실", null)
+
         var store1 = Store("음식점1", null)
         var store2 = Store("음식점2", null)
         var store3 = Store("음식점3", null)
         var store4 = Store("음식점4", null)
+
         storeList.add(store1)
         storeList.add(store2)
         storeList.add(store3)
         storeList.add(store4)
+//        storeList.add(store5)
+//        storeList.add(store6)
+//        storeList.add(store7)
+//        storeList.add(store8)
+//        storeList.add(store9)
 
     }
 
