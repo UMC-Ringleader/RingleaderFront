@@ -4,4 +4,8 @@
     <string name="string_next">next</string>
     <string name="pass">건너뛰기</string>
     <string name="confirm">확인</string>
+
+    //splash
+    <string name="splash_sub_title">우리동네 이모저모,</string>
+    <string name="splash_main_title">골목대장</string>
 </resources>

@@ -3,7 +3,7 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:id="@+id/myToolbar"
-    android:background="#CDDC39">
+    android:background="@color/white">
 
     <TextView
         android:id="@+id/my_toolbar_tv"
@@ -11,7 +11,7 @@
         android:layout_height="wrap_content"
 
         android:textSize="22sp"
-        android:textColor="@color/black"
+        android:textColor="@color/main_color"
         android:text="장소"
         android:textStyle="bold"
         android:layout_gravity="center" />

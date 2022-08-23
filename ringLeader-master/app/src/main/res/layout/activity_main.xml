@@ -22,14 +22,14 @@
         android:id="@+id/main_bnv"
         android:layout_width="match_parent"
         android:layout_height="60dp"
-        app:itemIconSize="20dp"
         app:itemIconTint="@drawable/btm_color_selector"
         app:itemTextColor="@drawable/btm_color_selector"
-        app:labelVisibilityMode="labeled"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent"
+        app:labelVisibilityMode="unlabeled"
+        app:itemIconSize="@dimen/bottom_navigation_icon_size"
         app:menu="@menu/bottom_nav_menu" />
 
 <!--    <androidx.viewpager2.widget.ViewPager2-->

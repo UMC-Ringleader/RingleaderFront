@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <menu xmlns:tools="http://schemas.android.com/tools"
     xmlns:android="http://schemas.android.com/apk/res/android"
+
     xmlns:app="http://schemas.android.com/apk/res-auto">
 <!--    <com.google.android.material.tabs.TabItem-->
 <!--        android:layout_width="wrap_content"-->
@@ -27,24 +28,27 @@
 
     <item
         android:id="@+id/MainPageFragment"
-        android:icon="@drawable/ic_baseline_home_24"
+        android:icon="@drawable/ic_icon_home_off_2"
         app:showAsAction="always"
         android:enabled="true"
         android:title="Home"
+
         tools:ignore="AlwaysShowAction" />
     <item
         android:id="@+id/SearchFragment"
-        android:icon="@drawable/ic_baseline_list_24"
+        android:icon="@drawable/ic_icon_search_off_2"
         app:showAsAction="always"
+
         android:title="Search" />
     <item
         android:id="@+id/RankFragment"
-        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:icon="@drawable/ic_icon_rank_off_2"
         app:showAsAction="always"
+
         android:title="Rank" />
     <item
         android:id="@+id/ProfileFragment"
-        android:icon="@drawable/ic_baseline_bar_chart_24"
+        android:icon="@drawable/ic_icon_mypage_off_2"
         app:showAsAction="always"
         android:title="Profile" />
 
